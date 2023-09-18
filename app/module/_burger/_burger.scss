@@ -1,0 +1,60 @@
+.burger {
+   display: none;
+
+   @include mq("tablet") {
+      display: block;
+      position: relative;
+      width: 44px;
+      height: 44px;
+      right: 5px;
+      border-radius: 10%;
+      z-index: 10;
+      transition: opacity 0.3s, box-shadow 0.3s;
+
+      &:focus {
+         box-shadow: 0px 0px 0px 2px $color-line;
+      }
+      
+      &__line {
+         position: absolute;
+         background-color: $color-line;
+         width: 30px;
+         height: 2px;
+         top: 20px;
+         right: 7px;
+         transition: transform 0.3s;
+
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            background-color: $color-line;
+            width: 30px;
+            height: 2px;
+            right: 0;
+            transition: all 0.3s;
+         }
+         &::before {
+            top: 10px;
+         }
+         &::after {
+            bottom: 10px;
+         }
+      }
+      &.active .burger__line {
+         background-color: transparent;
+      }
+      &.active .burger__line::before {
+         transform: rotate(-45deg);
+         top: 0;
+      }
+
+      &.active .burger__line::after {
+         transform: rotate(45deg);
+         bottom: 0;
+      }
+   }
+}
+
+
+

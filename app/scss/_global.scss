@@ -1,0 +1,98 @@
+html {
+   height: 100%;
+}
+
+body {
+   font-family: $font-family;
+   color: $color;
+   background-color: $background-color;
+   font-size: $font-size;
+   line-height: $line-height;
+   height: 100%;
+   overflow-x: hidden;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+.main {
+   flex: 1 0 auto;
+}
+.footer {
+   flex: 0 0 auto;
+}
+
+.container {
+   max-width: $container;
+   padding: $container-padding;
+   margin: 0 auto;
+}
+
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.lock {
+   overflow: hidden;
+}
+
+.d-flex {
+   display: flex;
+}
+
+.d-flex-wrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.d-flex-column {
+   display: flex;
+   flex-direction: column;
+}
+
+.align-start {
+   align-items: flex-start;
+}
+
+.align-center {
+   align-items: center;
+}
+
+.align-end {
+   align-items: flex-end;
+}
+
+.justify-start {
+   justify-content: flex-start;
+}
+
+.justify-center {
+   justify-content: center;
+}
+
+.justify-end {
+   justify-content: flex-end;
+}
+
+.justify-between {
+   justify-content: space-between;
+}
+
+.justify-around {
+   justify-content: space-around;
+}
+
+.justify-evenly {
+   justify-content: space-evenly;
+}

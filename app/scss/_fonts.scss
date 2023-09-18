@@ -1,0 +1,18 @@
+
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: url("../fonts/#{$url}.woff2") format("woff2"), 
+             url("../fonts/#{$url}.woff") format("woff");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: $style;
+    }
+}
+
+@include font-face("Rubik", "../fonts/Rubik-LightItalic", 300, italic);
+@include font-face("Rubik", "../fonts/Rubik-Light", 300, normal);
+@include font-face("Rubik", "../fonts/Rubik-Regular", 400, normal);
+@include font-face("Rubik", "../fonts/Rubik-Medium", 500, normal);
+@include font-face("Rubik", "../fonts/Rubik-SemiBold", 600, normal);
+

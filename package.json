@@ -1,0 +1,38 @@
+{
+   "name": "start_gulp",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "Sergiy Kobylchuk",
+   "license": "ISC",
+   "devDependencies": {
+      "browser-sync": "^2.27.9",
+      "del": "^6.0.0",
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^8.0.0",
+      "gulp-cheerio": "^1.0.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-file-include": "^2.3.0",
+      "gulp-imagemin": "^7.1.0",
+      "gulp-replace": "^1.1.4",
+      "gulp-sass": "^5.1.0",
+      "gulp-svg-sprite": "^2.0.3",
+      "gulp-uglify": "^3.0.2",
+      "jquery": "^3.6.0",
+      "sass": "^1.50.1"
+   },
+   "dependencies": {
+      "@fancyapps/fancybox": "^3.5.7",
+      "ion-rangeslider": "^2.3.1",
+      "jquery-form-styler": "^2.0.2",
+      "magnific-popup": "^1.1.0",
+      "mixitup": "^3.3.1",
+      "rateyo": "^2.3.2",
+      "aos": "^2.3.4",
+      "animate.css": "^4.1.1",
+      "slick-carousel": "^1.8.1"
+   }
+}

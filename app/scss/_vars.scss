@@ -1,0 +1,44 @@
+
+
+//  base  //
+$font-family: "Rubik", sans-serif;
+$container: 1230px;
+$container-padding: 0 15px;
+$background-color: #ffffff;
+$color: #000000;
+$font-size: 18px;
+$line-height: 1.3;
+
+
+//  colors //
+$dark: #31352b;
+$white: #ffffff;
+$dark-blue: #363853;
+$orange: #ff6838;
+
+
+// burger //
+$color-line: #000000;
+
+//------------//
+
+//==== burger-2 =====//
+
+$bar-width: 35px;
+$bar-height: 3px;
+$bar-spacing: 12px;
+$bar-color: #000000;
+
+//=====================//
+
+
+// breakpoints //
+$breakpoints: (
+    "desktop-lg": 1440px,
+    "desktop": 1200px,
+    "tablet-lg": 992px,
+    "tablet": 768px,
+    "phone": 576px,
+    "phone-xs": 360px,
+);
+
