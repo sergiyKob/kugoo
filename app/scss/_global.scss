@@ -29,6 +29,10 @@ body {
    max-width: $container;
    padding: $container-padding;
    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 20px;
 }
 
 .sr-only {
@@ -223,5 +227,38 @@ svg {
    }
    &:active {
       background-color: $background-rgb-30;
+   }
+}
+
+.link {
+   position: relative;
+   font-size: 14px;
+   font-weight: 500;
+   color: $accent;
+   padding: 1px 3px;
+   border-radius: 3px;
+   transition:
+      color 0.2s,
+      box-shadow 0.2s,
+      opacity 0.2s;
+
+   &:hover {
+      text-decoration: underline;
+   }
+   &:focus {
+      box-shadow: 0 0 0 2px $accent-rgb-30;
+   }
+   &:active {
+      opacity: 0.8;
+   }
+
+   &__icon {
+      fill: $accent;
+   }
+
+   &--with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
    }
 }
