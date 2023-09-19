@@ -31,7 +31,7 @@ body {
    margin: 0 auto;
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   align-items: center;
    gap: 20px;
 }
 
@@ -260,5 +260,55 @@ svg {
       display: flex;
       align-items: center;
       gap: 8px;
+   }
+}
+
+.online-chat {
+   display: flex;
+   gap: 15px;
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 8.5px;
+   }
+   &__item {
+      width: 12px;
+      height: 12px;
+   }
+
+   &__icon {
+      fill: $gray-600;
+   }
+
+   &__link {
+   }
+
+   &__icon--viber,
+   &__icon--whatsapp,
+   &__icon--telegram {
+      transition:
+         fill 0.2s,
+         opacity 0.2s;
+
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__icon--viber {
+      @include hover {
+         fill: #8e24aa;
+      }
+   }
+   &__icon--whatsapp {
+      @include hover {
+         fill: #4caf50;
+      }
+   }
+   &__icon--telegram {
+      @include hover {
+         fill: #039be5;
+      }
    }
 }
