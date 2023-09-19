@@ -102,6 +102,10 @@ body {
    justify-content: space-evenly;
 }
 
+.ttu {
+   text-transform: uppercase;
+}
+
 //  buttons
 
 svg {
@@ -325,5 +329,19 @@ svg {
    &__current {
       font-size: 20px;
       font-weight: 600;
+   }
+}
+
+.label {
+   color: $white;
+   padding: 4px 8px;
+   border-radius: 5px;
+   background-color: $black;
+
+   &--green {
+      background-color: $green;
+   }
+   &--red {
+      background-color: $orange;
    }
 }
