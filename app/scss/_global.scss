@@ -312,3 +312,18 @@ svg {
       }
    }
 }
+
+.price {
+   &__old {
+      font-size: 12px;
+      font-weight: 500;
+      color: $gray-600;
+      text-decoration-line: line-through;
+   }
+   &__currency {
+   }
+   &__current {
+      font-size: 20px;
+      font-weight: 600;
+   }
+}
