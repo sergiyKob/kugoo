@@ -59,3 +59,11 @@ $maxWidth: 1920;
     position: absolute;
 }
 
+// center 
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -4,10 +4,11 @@ html {
 
 body {
    font-family: $font-family;
-   color: $color;
+   color: $black;
    background-color: $background-color;
    font-size: $font-size;
    line-height: $line-height;
+   font-weight: 400;
    height: 100%;
    overflow-x: hidden;
 }
@@ -95,4 +96,132 @@ body {
 
 .justify-evenly {
    justify-content: space-evenly;
+}
+
+//  buttons
+
+svg {
+   transition: transform 0.2s;
+}
+
+.wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   height: 200px;
+   background-color: $accent;
+}
+
+.btn {
+   display: inline-block;
+   font-size: 16px;
+   color: $white;
+   padding: 15px 25px;
+   text-align: center;
+   border-radius: 5px;
+   transition:
+      color 0.2s,
+      background-color 0.2s,
+      box-shadow 0.2s,
+      border 0.2s;
+
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
+   &:active {
+      box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
+   }
+
+   &--primary {
+      background-color: $accent;
+      &:hover {
+         background-color: #8185f9;
+      }
+   }
+
+   &--secondary {
+      background-color: $background;
+      color: $gray-600;
+      border: 1.3px solid transparent;
+
+      &:hover {
+         color: $accent;
+         background-color: $white;
+         border: 1.3px solid $accent;
+      }
+   }
+
+   &--secondary-2 {
+      background-color: $white;
+      color: $accent;
+      border: 1.3px solid transparent;
+
+      &:hover {
+         background-color: $accent;
+         color: $white;
+         border: 1.3px solid $white;
+      }
+      &:focus {
+         box-shadow: 0 0 0 3px $white-rgb-50;
+      }
+      &:active {
+         background-color: #8185f9;
+      }
+   }
+
+   &--with-border {
+      color: $accent;
+      background-color: $white;
+      border: 1.3px solid $accent;
+      &:hover {
+         background-color: $accent-rgb-10;
+      }
+   }
+
+   &--medium {
+      font-size: 12px;
+      padding: 10px 20px;
+   }
+
+   &--with-icon {
+      width: 187px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 11px 18px;
+      border-radius: 10px;
+      &:hover {
+         svg {
+            transform: translateX(3px);
+         }
+      }
+   }
+}
+
+.btn-compare,
+.btn-wishlist,
+.btn-cart,
+.btn-colose {
+   @include center;
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+   transition:
+      background-color 0.2s,
+      box-shadow 0.2s,
+      fill 0.2s;
+
+   &:hover {
+      background-color: $background;
+      fill: $accent;
+   }
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
+   &:active {
+      background-color: $background-rgb-30;
+   }
 }
