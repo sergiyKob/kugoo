@@ -18,11 +18,13 @@ body {
    flex-direction: column;
    height: 100%;
 }
-.main {
-   flex: 1 0 auto;
-}
+
+.header,
 .footer {
-   flex: 0 0 auto;
+   flex-grow: 0;
+}
+.main {
+   flex-grow: 1;
 }
 
 .container {
@@ -31,7 +33,7 @@ body {
    margin: 0 auto;
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   align-items: center;
    gap: 20px;
 }
 
@@ -102,11 +104,13 @@ body {
    justify-content: space-evenly;
 }
 
+.ttu {
+   text-transform: uppercase;
+}
+
 //  buttons
 
-svg {
-   transition: transform 0.2s;
-}
+
 
 .wrap {
    display: flex;
@@ -197,11 +201,10 @@ svg {
       font-weight: 500;
       padding: 11px 18px;
       border-radius: 10px;
-      &:hover {
-         svg {
-            transform: translateX(3px);
-         }
-      }
+   }
+
+   &__icon {
+      fill: $white;
    }
 }
 
@@ -262,3 +265,102 @@ svg {
       gap: 8px;
    }
 }
+
+.online-chat {
+   display: flex;
+   gap: 15px;
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 8.5px;
+   }
+   &__item {
+      width: 12px;
+      height: 12px;
+   }
+
+   &__icon {
+      fill: $gray-600;
+   }
+
+   &__link {
+   }
+
+   &__icon--viber,
+   &__icon--whatsapp,
+   &__icon--telegram {
+      transition:
+         fill 0.2s,
+         opacity 0.2s;
+
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__icon--viber {
+      @include hover {
+         fill: #8e24aa;
+      }
+   }
+   &__icon--whatsapp {
+      @include hover {
+         fill: #4caf50;
+      }
+   }
+   &__icon--telegram {
+      @include hover {
+         fill: #039be5;
+      }
+   }
+}
+
+.price {
+   &__old {
+      font-size: 12px;
+      font-weight: 500;
+      color: $gray-600;
+      text-decoration-line: line-through;
+   }
+   &__currency {
+   }
+   &__current {
+      font-size: 20px;
+      font-weight: 600;
+   }
+}
+
+.label {
+   color: $white;
+   padding: 4px 8px;
+   border-radius: 5px;
+   background-color: $black;
+
+   &--green {
+      background-color: $green;
+   }
+   &--red {
+      background-color: $orange;
+   }
+}
+
+
+// Swiper buttons //
+.swiper-button-prev,
+.swiper-button-next {
+   width: 40px;
+   height: 40px;
+   outline: transparent;
+
+   svg {
+      width: 7px;
+      height: 12px;
+   }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   display: none;
+}
+//-----------------------//

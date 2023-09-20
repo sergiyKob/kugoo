@@ -11,21 +11,21 @@
 </head>
 
 
-<body id="body">
-   <header class="header">
+<body>
+   <div class="wrapper">
+      <header class="header">
    <div class="container">
-     
+     header
    </div>
    
 </header>
-   <div class="wrapper">
-
 
       <main class="main">
          <section class="hero">
+
    <div class="container hero__container">
 
-<!-------- buttons -------->
+      <!-------- buttons -------->
       <button class="btn btn--primary">
          Смотреть все
       </button>
@@ -40,7 +40,7 @@
       </button>
       <button class="btn btn--primary btn--with-icon">
          Подробнее
-         <svg class="icon" width="16" height="16" style="fill: #fff;">
+         <svg class="btn__icon" width="16" height="16">
             <use xlink:href="images/sprite.svg#arrow-right"></use>
          </svg>
       </button>
@@ -49,7 +49,7 @@
          Для города
       </button>
 
-      
+
       <div class="wrap">
          <button class="btn btn--secondary-2">
             Перейти в католог
@@ -69,34 +69,200 @@
       </button>
       <button class="btn-cart">
          <svg class="btn-cart__icon" width="20" height="20">
-           <use xlink:href="images/sprite.svg#icon-cart-empty"></use>
+            <use xlink:href="images/sprite.svg#icon-cart-empty"></use>
          </svg>
       </button>
 
-<!-------- links -------->
+      <!-------- links -------->
       <a class="link" href="#">
          Подобрать модель
       </a>
       <a class="link link--with-icon" href="#">
          Подобрать модель
          <svg class="link__icon" width="18" height="18">
-           <use xlink:href="images/sprite.svg#arrow-right"></use>
+            <use xlink:href="images/sprite.svg#arrow-right"></use>
          </svg>
       </a>
+
+
+      <!---------- online chat------------->
+
+      <div class="online-chat">
+         <ul class="online-chat__list">
+            <li class="online-chat__item">
+               <a class="online-chat__link" href="#">
+                  <svg class="online-chat__icon online-chat__icon--viber" width="12" height="12">
+                     <use xlink:href="images/sprite.svg#icon-viber"></use>
+                  </svg>
+               </a>
+            </li>
+            <li class="online-chat__item">
+               <a class="online-chat__link" href="#">
+                  <svg class="online-chat__icon online-chat__icon--whatsapp" width="12" height="12">
+                     <use xlink:href="images/sprite.svg#whatsapp"></use>
+                  </svg>
+               </a>
+            </li>
+            <li class="online-chat__item">
+               <a class="online-chat__link" href="#">
+                  <svg class="online-chat__icon online-chat__icon--telegram" width="12" height="12">
+                     <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                  </svg>
+               </a>
+            </li>
+         </ul>
+      </div>
+
+
+      <!---------- price ------------->
+
+      <div class="price d-flex-column">
+         <div class="price__old">
+            39900
+            <span class="price__currency">₽</span>
+         </div>
+         <div class="price__current">
+            29900
+            <span class="price__currency">₽</span>
+         </div>
+      </div>
+
+      <!---------- label ------------->
+
+      <span class="label label--red ttu">
+         хит
+      </span>
+      <span class="label label--green">
+         Новинка
+      </span>
+
+
+      <!---------- product-card ------------->
+      <article class="product-card d-flex-column">
+         <div class="product-card__top">
+            <div class="product-card__slider">
+
+               <!-- Slider main container -->
+               <div class="swiper slider-product-card">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper slider-product-card__wrap">
+                     <!-- Slides -->
+                     <div class="swiper-slide slider-product-card__slide">
+                        <a class="slider-product-card__slide-link" href="#">
+                           <img class="slider-product-card__img" width="255" height="231"
+                              src="images/product-card/img1.jpg" alt="img1">
+                        </a>
+                     </div>
+                     <div class="swiper-slide slider-product-card__slide">
+                        <a class="slider-product-card__slide-link" href="#">
+                           <img class="slider-product-card__img" width="255" height="231"
+                              src="images/product-card/img1.jpg" alt="img1">
+                        </a>
+                     </div>
+                     <div class="swiper-slide slider-product-card__slide">
+                        <a class="slider-product-card__slide-link" href="#">
+                           <img class="slider-product-card__img" width="255" height="231"
+                              src="images/product-card/img1.jpg" alt="img1">
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Navigation buttons -->
+                  <div class="swiper-button-prev slider-btn-prev">
+                     <svg class="slider-btn-prev__icon">
+                        <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
+                     </svg>
+                  </div>
+                  <div class="swiper-button-next slider-btn-next">
+                     <svg class="slider-btn-next__icon">
+                        <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+                     </svg>
+                  </div>
+
+               </div>
+            </div>
+            <span class="label label--red ttu product-card__label">
+               хит
+            </span>
+            <button class="btn-compare product-card__compare">
+               <svg class="btn-compare__icon" width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-compare"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="product-card__bottom">
+            <h3 class="product-card__title">
+               <a class="product-card__title-link" href="#">
+                  Kugoo Kirin M4
+               </a>
+            </h3>
+            <ul class="product-card__info-list">
+               <li class="product-card__info-item product-card__info-item--accum">
+                  2000 mAh
+               </li>
+               <li class="product-card__info-item product-card__info-item--power">
+                  1,2 л.с.
+               </li>
+               <li class="product-card__info-item product-card__info-item--speedometer">
+                  60 км/ч
+               </li>
+               <li class="product-card__info-item product-card__info-item--timer">
+                  5 часов
+               </li>
+
+            </ul>
+            <div class="product-card__row d-flex justify-between">
+               <div class="price d-flex-column">
+                  <div class="price__old">
+                     39 900
+                     <span class="price__currency">₽</span>
+                  </div>
+                  <div class="price__current">
+                     29 900
+                     <span class="price__currency">₽</span>
+                  </div>
+               </div>
+               <div class="product-card__actions d-flex">
+                  <button class="btn-cart product-card__cart">
+                     <svg class="btn-cart__icon product-card__cart-icon" width="20" height="20">
+                        <use xlink:href="images/sprite.svg#icon-cart-empty2"></use>
+                     </svg>
+                  </button>
+                  <button class="btn-wishlist product-card__wishlist">
+                     <svg class="btn-wishlist__icon product-card__wishlist-icon" width="20" height="20">
+                        <use xlink:href="images/sprite.svg#icon-heart-empty"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+            <a class="btn btn--primary btn--medium product-card__link" href="#">
+               Купить в 1 клик
+            </a>
+         </div>
+      </article>
+      <!------------------------------------->
+
+
    </div>
+
+
+
 </section>
 
-       
+
 
 
 
       </main>
 
       <footer class="footer">
+   <div class="container">
+      footer
+   </div>
 </footer>
    </div>
-   
-   
+
+   <script src="js/main.min.js"></script>
 </body>
 
 </html>
