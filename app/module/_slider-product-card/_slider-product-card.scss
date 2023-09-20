@@ -1,0 +1,52 @@
+.slider-product-card {
+   width: 255px;
+   height: 231px;
+
+   &__wrap {
+   }
+   &__slide {
+   }
+   &__img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.slider-btn-prev,
+.slider-btn-next {
+   @include center;
+   width: 40px;
+   height: 40px;
+   background-color: $white;
+   border-radius: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition:
+      opacity 0.2s ease-in-out,
+      visibility 0.2s ease-in-out,
+      background-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+   z-index: 100;
+
+   &:hover {
+      background-color: $background;
+   }
+
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
+
+   &:active {
+      background-color: $background-rgb-30;
+   }
+
+   &__icon {
+      fill: $accent;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.2s ease-in-out,
+         visibility 0.2s ease-in-out;
+   }
+}

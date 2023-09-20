@@ -18,11 +18,13 @@ body {
    flex-direction: column;
    height: 100%;
 }
-.main {
-   flex: 1 0 auto;
-}
+
+.header,
 .footer {
-   flex: 0 0 auto;
+   flex-grow: 0;
+}
+.main {
+   flex-grow: 1;
 }
 
 .container {
@@ -108,9 +110,7 @@ body {
 
 //  buttons
 
-svg {
-   transition: transform 0.2s;
-}
+
 
 .wrap {
    display: flex;
@@ -201,11 +201,10 @@ svg {
       font-weight: 500;
       padding: 11px 18px;
       border-radius: 10px;
-      &:hover {
-         svg {
-            transform: translateX(3px);
-         }
-      }
+   }
+
+   &__icon {
+      fill: $white;
    }
 }
 
@@ -345,3 +344,23 @@ svg {
       background-color: $orange;
    }
 }
+
+
+// Swiper buttons //
+.swiper-button-prev,
+.swiper-button-next {
+   width: 40px;
+   height: 40px;
+   outline: transparent;
+
+   svg {
+      width: 7px;
+      height: 12px;
+   }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   display: none;
+}
+//-----------------------//

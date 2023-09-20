@@ -1,0 +1,129 @@
+.product-card {
+   height: 100%;
+   width: 255px;
+   border-radius: 10px;
+   border: 1.5px solid $gray-200;
+
+   &:hover {
+      .product-card__title {
+         color: $accent;
+      }
+      .slider-btn-prev,
+      .slider-btn-next,
+      .slider-btn-prev__icon,
+      .slider-btn-next__icon {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+   &__top {
+      position: relative;
+      height: 231px;
+      background-color: #f0f1f5;
+      border-radius: 9px 9px 0px 0px;
+      overflow: hidden;
+   }
+
+   &__label,
+   &__compare {
+      position: absolute;
+      top: 10px;
+      z-index: 100;
+   }
+
+   &__label {
+      left: 10px;
+   }
+
+   &__compare {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(2.5px);
+      right: 10px;
+      fill: $gray-600;
+   }
+
+   &__bottom {
+      padding: 20px 24px;
+   }
+
+   &__title {
+      @include line-clamp(1);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition:
+         color 0.2s,
+         opacity 0.2s;
+
+      &:hover {
+         opacity: 0.8;
+      }
+   }
+
+   &__info-list {
+      font-family: "Roboto", sans-serif;
+      color: $gray-600;
+      line-height: 1.14;
+      margin-bottom: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 17px;
+   }
+
+   &__info-item {
+      position: relative;
+      min-height: 18px;
+      padding-left: 28px;
+
+      &::before {
+         @include pseudo;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         width: 18px;
+         height: 18px;
+         left: 0;
+         top: 0;
+      }
+   }
+
+   &__info-item--accum::before {
+      background-image: url("../images/icons/accum.svg");
+   }
+   &__info-item--power::before {
+      background-image: url("../images/icons/power.svg");
+   }
+   &__info-item--speedometer::before {
+      background-image: url("../images/icons/speedometer.svg");
+   }
+   &__info-item--timer::before {
+      background-image: url("../images/icons/timer.svg");
+   }
+
+   &__row {
+      margin-bottom: 16px;
+   }
+
+   &__actions {
+      gap: 10px;
+   }
+
+   &__cart,
+   &__wishlist {
+      box-shadow: 0 0 0 1.3px $gray-200;
+   }
+
+   &__wishlist-icon,
+   &__cart-icon {
+      fill: $accent;
+   }
+
+   &__link {
+      width: 100%;
+   }
+}
+
+
+
