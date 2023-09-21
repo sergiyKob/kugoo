@@ -1,0 +1,30 @@
+.team-card {
+   width: 255px;
+   text-align: center;
+
+   &__img-wrap {
+      background-color: $background;
+      border-radius: 10px 10px 0px 0px;
+      max-height: 322px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $accent;
+      overflow: hidden;
+      padding-top: 20px;
+   }
+
+   &__img {
+      object-fit: contain;
+   }
+
+   &__content {
+   }
+
+   &__title {
+      font-size: 18px;
+      font-weight: 500;
+   }
+
+   &__position {
+      color: $gray-600;
+   }
+}
