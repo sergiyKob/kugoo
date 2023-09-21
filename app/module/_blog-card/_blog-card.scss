@@ -1,0 +1,63 @@
+.blog-card {
+   width: 100%;
+   background-color: $background;
+   border-radius: 10px;
+
+   &__link {
+      @include flex-column;
+      height: 100%;
+   }
+
+   &__img {
+      @include img-bg;
+      height: 185px;
+      border-radius: 10px 10px 0px 0px;
+   }
+
+   &__content {
+      padding: 20px 20px 25px;
+   }
+
+   &__title {
+      @include line-clamp(2);
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      @include line-clamp(2);
+      margin-bottom: 18px;
+   }
+
+   &__bottom {
+      font-size: 12px;
+      color: $gray-600;
+   }
+
+   &__date,
+   &__views {
+      background-repeat: no-repeat;
+      padding-left: 28px;
+      width: 18px;
+      height: 18px;
+      top: 0;
+      left: 0;
+   }
+
+   &__date {
+      margin-right: 25px;
+   }
+
+   &__views {
+   }
+
+   &__date--calendar {
+      background-image: url("../images/icons/calendar.svg");
+   }
+
+   &__views--eye {
+      background-image: url("../images/icons/eye-fill.svg");
+   }
+}
