@@ -1,0 +1,64 @@
+.benefits-card {
+   height: 100%;
+   width: 100%;
+   border: 1px solid $gray-200;
+   padding: 25px 20px;
+   border-radius: 10px;
+
+   &--more-card {
+      position: relative;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      background-color: $background;
+      padding: 25px 30px;
+      border: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom right;
+      transition: background-color $transition;
+
+      @include hover {
+         background-color: $accent-rgb-30;
+         .benefits-card__descr {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__inner {
+      @include flex-column;
+      align-items: flex-start;
+   }
+
+   &__img {
+      margin-bottom: 20px;
+   }
+
+   &__icon {
+      fill: $accent;
+   }
+
+   &__title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+   }
+
+   &__text {
+      line-height: 1.28;
+   }
+
+   &__descr {
+      transition: text-decoration $transition;
+   }
+
+   &__link-card {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+   }
+}
