@@ -67,3 +67,10 @@ $maxWidth: 1920;
     align-items: center;
 }
 
+
+@mixin img-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+

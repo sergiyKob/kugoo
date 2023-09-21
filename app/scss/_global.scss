@@ -35,6 +35,7 @@ body {
    flex-direction: column;
    align-items: center;
    gap: 20px;
+   padding: 50px 0;
 }
 
 .sr-only {
@@ -109,8 +110,6 @@ body {
 }
 
 //  buttons
-
-
 
 .wrap {
    display: flex;
@@ -364,3 +363,21 @@ body {
    display: none;
 }
 //-----------------------//
+
+
+.catalog {
+   padding: 100px 0;
+
+   &__container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 30px;
+
+   }
+}

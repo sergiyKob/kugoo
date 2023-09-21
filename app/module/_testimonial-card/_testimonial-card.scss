@@ -1,0 +1,92 @@
+.testimonial-card {
+   @include img-bg;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   width: 388px;
+   height: 292px;
+   background-color: $background;
+   color: $white;
+   padding: 20px;
+   border-radius: 10px;
+   overflow: hidden;
+
+   &::after {
+      @include pseudo;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      border-radius: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity $transition,
+         visibility $transition;
+   }
+
+   @include hover {
+      &::after {
+         opacity: 1;
+         visibility: visible;
+      }
+      .testimonial-card__inner {
+         opacity: 1;
+         visibility: visible;
+         transform: translateY(0px);
+      }
+   }
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(200px);
+      transition:
+         opacity $transition,
+         visibility $transition,
+         transform $transition;
+   }
+
+   &__author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+   }
+
+   &__author-img {
+      border-radius: 100%;
+      object-fit: cover;
+   }
+
+   &__author-name {
+      font-size: 16px;
+      font-weight: inherit;
+   }
+
+   &__author-descr,
+   &__time {
+      font-size: 12px;
+      line-height: 1;
+      opacity: 0.7;
+   }
+
+   &__info {
+      display: flex;
+      align-items: flex-end;
+      gap: 15px;
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      @include line-clamp(5);
+      line-height: 1.2;
+   }
+}

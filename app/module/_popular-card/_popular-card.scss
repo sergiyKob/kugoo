@@ -1,0 +1,76 @@
+.popular-card {
+   width: 100%;
+   // width: 255px;
+   // height: 255px;
+   background-color: $background;
+   color: $white;
+   font-weight: 500;
+   border-radius: 10px;
+
+   &__link {
+      position: relative;
+      height: 255px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &::after {
+         @include pseudo;
+         background-color: rgba(0, 0, 0, 0.1);
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         opacity: 0;
+         visibility: hidden;
+         transition:
+            opacity 0.2s,
+            visibility 0.2s;
+      }
+
+      @include hover {
+         &::after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+
+   &__content {
+      border-radius: 10px;
+      border: 2px solid $white-rgb-10;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      padding: 10px 16px;
+      z-index: 2;
+   }
+
+   &__content-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+   }
+
+   &__title {
+      font-size: 18px;
+      font-weight: inherit;
+   }
+
+   &__price {
+      font-size: 14px;
+   }
+
+   &__price-num {
+   }
+
+   &__price-currency {
+   }
+}

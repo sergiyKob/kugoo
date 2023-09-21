@@ -38,7 +38,7 @@
    }
 
    &:active {
-      background-color: $background-rgb-30;
+      background-color: $white;
    }
 
    &__icon {
@@ -48,5 +48,14 @@
       transition:
          opacity 0.2s ease-in-out,
          visibility 0.2s ease-in-out;
+   }
+
+   @include mq("tablet-lg") {
+      opacity: 1;
+      visibility: visible;
+      &__icon {
+         opacity: 1;
+         visibility: visible;
+      }
    }
 }
