@@ -63,6 +63,7 @@
    }
 
    &__link {
+      display: inline-flex;
    }
 
    &__icon--viber,
@@ -107,8 +108,29 @@
    }
 
    &__btn {
+      @include center;
+      font-size: 18px;
+      color: $gray-600;
       width: 18px;
       height: 18px;
+      box-shadow: 0 0 0 1px $gray-600;
+      border-radius: 100%;
+      transition:
+         background-color $transition,
+         color $transition;
+
+      @include hover {
+         background-color: $gray-600;
+         color: $white;
+      }
+
+      &:active {
+         opacity: 0.8;
+      }
+
+      &:focus {
+         box-shadow: 0 0 0 2px $accent;
+      }
    }
 
    &__icon {
@@ -117,10 +139,25 @@
 }
 
 .logo {
+   padding: 0 5px;
+   margin-left: -5px;
+   border-radius: 5px;
+   transition:
+      opacity $transition,
+      box-shadow $transition;
+   @include hover {
+      opacity: 0.8;
+   }
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
+   &:active {
+      opacity: 0.7;
+   }
+
    &__img {
    }
 }
-
 .header-catalog {
    margin-right: 20px;
    &__btn {
@@ -146,6 +183,7 @@
       background-color: $background;
       border-radius: 5px;
       padding: 5px 14px;
+      cursor: pointer;
    }
    &__label {
       width: 100%;
