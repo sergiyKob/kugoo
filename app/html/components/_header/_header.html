@@ -41,12 +41,61 @@
          </div>
          <div class="header-contacts">
             <a class="hover-underline header-contacts__link" href="tel:78005055461">+7 (800) 505-54-61</a>
-            <button class="header-contacts__btn">+</button>
+
+            <button class="header-contacts__btn" data-path="modal-contacts">
+               <svg class="header-contacts__btn-icon" width="10" height="10">
+                 <use xlink:href="images/sprite.svg#icon-plus"></use>
+               </svg>
+            </button>
 
             <!-- here modal contacts -->
+            <div class="modal-contacts" data-target="modal-contacts">
+               <ul class="modal-contacts__list">
+                  <li class="modal-contacts__item">
+                     <a class="modal-contacts__link" href="tel:74993507692">
+                        <h4 class="modal-contacts__title">
+                           Сервисный центр
+                        </h4>
+                        <span class="modal-contacts__phone">
+                           + 7 (499) 350 76 92
+                        </span>
+                        <div class="modal-contacts__hour-work">
+                           пн-сб 10:00 - 19:00
+                        </div>
+                     </a>
+                  </li>
+                  <li class="modal-contacts__item">
+                     <a class="modal-contacts__link" href="tel:74992816452">
+                        <h4 class="modal-contacts__title">
+                           Оптовый отдел
+                        </h4>
+                        <span class="modal-contacts__phone">
+                           +7 (499) 281-64-52
+                        </span>
+                        <div class="modal-contacts__hour-work">
+                           пн-сб 10:00 - 19:00
+                        </div>
+                     </a>
+                  </li>
+                  <li class="modal-contacts__item">
+                     <a class="modal-contacts__link" href="tel:74993507692">
+                        <h4 class="modal-contacts__title">
+                           Сервисный центр
+                        </h4>
+                        <span class="modal-contacts__phone">
+                           +7 (499) 350-76-92
+                        </span>
+                        <div class="modal-contacts__hour-work">
+                           ср-вс с 10:00 до 19:00
+                        </div>
+                     </a>
+                  </li>
+               </ul>
+               <button class="modal-contacts__close" type="button">X</button>
+            </div>
+
          </div>
       </div>
-
    </div>
 
    <div class="header__middle">

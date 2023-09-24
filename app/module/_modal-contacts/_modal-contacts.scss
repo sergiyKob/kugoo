@@ -1,0 +1,78 @@
+.modal-contacts {
+   position: absolute;
+   top: 32px;
+   left: 0;
+   width: 247px;
+   background-color: $white;
+   box-shadow: 0px 10px 30px 0px rgba(111, 115, 238, 0.2);
+   border-radius: 5px;
+   opacity: 0;
+   visibility: hidden;
+   transition:
+      opacity $transition,
+      visibility $transition;
+      z-index: 100;
+
+      &.is-open {
+         opacity: 1;
+         visibility: visible;
+   }
+
+   &__list {
+   }
+
+   &__item {
+      overflow: hidden;
+      &:not(:last-child) {
+         border-bottom: 1px solid $gray-200;
+      }
+      &:first-child {
+         border-radius: 5px 5px 0px 0px;
+      }
+      &:last-child {
+         border-radius: 0 0 5px 5px;
+      }
+   }
+
+   &__title {
+      font-size: 12px;
+      color: $gray-600;
+      font-weight: 400;
+      margin-bottom: 2px;
+   }
+
+   &__link {
+      display: inline-block;
+      width: 100%;
+      padding: 15px 20px;
+      transition: background-color $transition;
+
+      @include hover {
+         background-color: $gray-200;
+      }
+      &:active {
+         background-color: $background-rgb-60;
+      }
+   }
+
+   &__phone {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 3px;
+   }
+
+   &__hour-work {
+      font-size: 12px;
+   }
+   &__close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: $gray-300;
+      top: 5px;
+      right: 5px;
+      border-radius: 3px;
+
+   }
+}

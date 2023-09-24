@@ -28,6 +28,7 @@ body {
 }
 
 .container {
+   position: relative;
    max-width: $container;
    padding: $container-padding;
    margin: 0 auto;
@@ -354,5 +355,27 @@ body {
       &::before {
          opacity: 0.8;
       }
+   }
+}
+
+.overlay {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition:
+      opacity 0.2s,
+      visibility 0.2s;
+   z-index: 99;
+
+   &.is-active {
+      opacity: 1;
+      visibility: visible;
    }
 }

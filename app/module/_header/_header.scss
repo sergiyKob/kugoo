@@ -1,9 +1,13 @@
 .header {
    background-color: $white;
+   // z-index: 100;
 
    &__top {
+      position: relative;
+      background-color: $white;
       padding: 11px 0;
       border-bottom: 1px solid #ecf3ff;
+      z-index: 100;
    }
    &__top-container {
       display: flex;
@@ -13,6 +17,7 @@
 
    &__middle {
       padding: 30px 0 35px;
+      background-color: $white;
    }
    &__middle-container {
       display: flex;
@@ -23,6 +28,7 @@
    }
 
    &__bottom {
+      position: relative;
       background-color: $background;
       padding: 4px 0;
    }
@@ -96,6 +102,7 @@
 }
 
 .header-contacts {
+   position: relative;
    display: flex;
    align-items: center;
    gap: 9px;
@@ -109,32 +116,32 @@
 
    &__btn {
       @include center;
-      font-size: 18px;
-      color: $gray-600;
       width: 18px;
       height: 18px;
-      box-shadow: 0 0 0 1px $gray-600;
+      border: 1px solid $gray-600;
       border-radius: 100%;
-      transition:
-         background-color $transition,
-         color $transition;
+      transition: background-color $transition;
 
       @include hover {
          background-color: $gray-600;
-         color: $white;
+         .header-contacts__btn-icon {
+            fill: $white;
+         }
       }
-
       &:active {
          opacity: 0.8;
       }
-
-      &:focus {
-         box-shadow: 0 0 0 2px $accent;
-      }
    }
 
-   &__icon {
+   &__btn-icon {
       fill: $gray-600;
+      transition:
+         fill $transition,
+         transform $transition;
+
+      &.is-active {
+         transform: rotate(45deg);
+      }
    }
 }
 
