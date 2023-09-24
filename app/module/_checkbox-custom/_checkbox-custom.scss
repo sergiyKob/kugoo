@@ -1,0 +1,51 @@
+.checkbox-label {
+   position: relative;
+   display: inline-block;
+
+   &:hover {
+      .checkbox-custom {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+   }
+   &:active {
+      .checkbox-custom {
+         box-shadow: 0 0 0 3px $accent-rgb-10;
+      }
+   }
+}
+
+.checkbox {
+   @include checkbox-hidden;
+   &:checked + .checkbox-custom {
+      background-color: $accent-rgb-30;
+      &::before {
+         left: 30px;
+      }
+   }
+}
+
+.checkbox-custom {
+   display: block;
+   width: 56px;
+   height: 30px;
+   border-radius: 20px;
+   padding: 3px;
+   border: 1px solid $accent;
+   cursor: pointer;
+   transition:
+      background-color 0.3s,
+      box-shadow 0.3s,
+      opacity 0.3s;
+
+   &::before {
+      @include pseudo;
+      width: 20px;
+      height: 20px;
+      background-color: $accent;
+      border-radius: 20px;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: left 0.3s;
+   }
+}

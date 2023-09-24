@@ -1,3 +1,269 @@
 .header {
+   background-color: $white;
 
+   &__top {
+      padding: 11px 0;
+      border-bottom: 1px solid #ecf3ff;
+   }
+   &__top-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+   }
+
+   &__middle {
+      padding: 30px 0 35px;
+   }
+   &__middle-container {
+      display: flex;
+      align-items: center;
+   }
+   &__logo {
+      margin-right: 35px;
+   }
+
+   &__bottom {
+      background-color: $background;
+      padding: 4px 0;
+   }
+   &__bottom-menu {
+   }
+}
+
+.header-top-menu {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: $gray-600;
+      font-size: 12px;
+   }
+   &__item {
+   }
+   &__link {
+   }
+   &__btn {
+      color: inherit;
+   }
+}
+
+.online-chat {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+   }
+   &__item {
+      width: 12px;
+      height: 12px;
+   }
+
+   &__icon {
+      fill: $gray-600;
+   }
+
+   &__link {
+   }
+
+   &__icon--viber,
+   &__icon--whatsapp,
+   &__icon--telegram {
+      transition:
+         fill 0.2s,
+         opacity 0.2s;
+
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__icon--viber {
+      @include hover {
+         fill: #8e24aa;
+      }
+   }
+   &__icon--whatsapp {
+      @include hover {
+         fill: #4caf50;
+      }
+   }
+   &__icon--telegram {
+      @include hover {
+         fill: #039be5;
+      }
+   }
+}
+
+.header-contacts {
+   display: flex;
+   align-items: center;
+   gap: 9px;
+   margin-left: auto;
+
+   &__link {
+      font-size: 12px;
+      line-height: 1.41;
+      font-weight: 500;
+   }
+
+   &__btn {
+      width: 18px;
+      height: 18px;
+   }
+
+   &__icon {
+      fill: $gray-600;
+   }
+}
+
+.logo {
+   &__img {
+   }
+}
+
+.header-catalog {
+   margin-right: 20px;
+   &__btn {
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 9px 15px;
+   }
+}
+
+.header-search {
+   position: relative;
+   flex-grow: 1;
+   margin-right: 30px;
+
+   &__form {
+      display: flex;
+   }
+   &__select {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      background-color: $background;
+      border-radius: 5px;
+      padding: 5px 14px;
+   }
+   &__label {
+      width: 100%;
+   }
+   &__input {
+      height: 40px;
+      border: 1.5px solid $accent;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0px 50px 0px 140px;
+      &::placeholder {
+         transition:
+            color $transition,
+            opacity $transition;
+      }
+
+      @include hover {
+         &::placeholder {
+            color: $black;
+         }
+      }
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+         &::placeholder {
+            opacity: 0;
+         }
+      }
+   }
+   &__btn {
+      @include center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $accent;
+      border-radius: 0px 5px 5px 0px;
+      padding: 12px;
+      transition:
+         background-color $transition,
+         box-shadow $transition;
+
+      &:hover {
+         background-color: #8185f9;
+      }
+
+      &:active {
+         box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
+      }
+   }
+   &__btn-icon {
+      fill: $white;
+   }
+}
+
+.header-actions {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+   &__item {
+   }
+
+   &__btn {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      font-weight: 500;
+      padding: 10px 13px;
+      border-radius: 50px;
+      transition: color $transition;
+
+      &:hover {
+         color: $accent;
+         .btn-cart__icon {
+            fill: $accent;
+         }
+      }
+   }
+}
+
+.header-bottom-menu {
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 10px;
+      font-weight: 500;
+   }
+
+   &__item {
+   }
+
+   &__link {
+      display: inline-block;
+      padding: 6.5px 10px;
+      margin-left: -10px;
+      border-radius: 5px;
+      transition:
+         background-color $transition,
+         box-shadow $transition;
+
+      @include hover {
+         background-color: $accent-rgb-20;
+      }
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+      &:active {
+         box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
+      }
+   }
+
+   &__label {
+      background-color: $accent;
+      color: $white;
+      font-size: 10px;
+      border-radius: 300px;
+      padding: 2px 6px;
+   }
 }
