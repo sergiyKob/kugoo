@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-   position: relative;
+   // position: relative;
    max-width: $container;
    padding: $container-padding;
    margin: 0 auto;
@@ -49,6 +49,30 @@ body {
 
 .lock {
    overflow: hidden;
+}
+
+.hidden-scrollbar {
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+}
+
+.custom-scrollbar {
+   &::-webkit-scrollbar {
+      width: 5px;
+      background-color: #f9f9fd;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $accent;
+   }
+
+   &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background-color: #f9f9fd;
+   }
 }
 
 .d-flex {
@@ -315,21 +339,21 @@ body {
 }
 //-----------------------//
 
-.catalog {
-   padding: 100px 0;
+// .catalog {
+//    padding: 100px 0;
 
-   &__container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 15px;
-   }
+//    &__container {
+//       max-width: 1140px;
+//       margin: 0 auto;
+//       padding: 0 15px;
+//    }
 
-   &__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 30px;
-   }
-}
+//    &__list {
+//       display: grid;
+//       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+//       gap: 30px;
+//    }
+// }
 
 .hover-underline {
    position: relative;
@@ -364,7 +388,7 @@ body {
    top: 0;
    right: 0;
    bottom: 0;
-   background-color: rgba(0, 0, 0, 0.5);
+   background-color: rgba(0, 0, 0, 0.2);
    height: 100%;
    width: 100%;
    opacity: 0;
