@@ -1,17 +1,17 @@
 .catalog {
-   // display: none;
    display: flex;
    position: absolute;
    left: 150px;
    top: 250px;
-
    font-size: 16px;
    font-weight: 500;
    border-radius: 5px;
    background-color: $white;
-   // background-color: #E09D9D;
    padding: 10px;
    box-shadow: 0px 10px 30px 0px rgba(111, 115, 238, 0.1);
+
+   display: none; //------//
+
 
    &__list {
       @include flex-column;

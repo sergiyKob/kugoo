@@ -1,4 +1,336 @@
 .footer {
-   height: 100px;
-   background-color: green;
+   background-color: $background;
+
+   &__head {
+      display: flex;
+      justify-content: space-between;
+      padding: 47px 0;
+   }
+
+   &__head-left {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__catalog-title {
+      margin-bottom: 17px;
+   }
+   &__catalog {
+      width: 35%;
+   }
+
+   &__catalog-list {
+   }
+   &__catalog-item {
+   }
+
+   &__catalog-item,
+   &__menu-item {
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__catalog-link {
+   }
+
+   &__catalog-link,
+   &__menu-link {
+      color: $gray-600;
+      padding: 0 3px;
+      margin-left: -3px;
+      border-radius: 3px;
+      transition:
+         color $transition,
+         opacity $transition;
+
+      @include hover {
+         color: $accent;
+      }
+      &:focus {
+         color: $accent;
+         box-shadow: 0 0 0 2px $accent-rgb-30;
+      }
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__menu {
+      width: 55%;
+   }
+   &__menu-list {
+      column-count: 2;
+   }
+   &__menu-item {
+   }
+   &__menu-link {
+   }
+   &__contacts {
+   }
+
+   &__body {
+      display: flex;
+      gap: 60px;
+      padding: 36px 0;
+      border-top: 1px solid $gray-600-rgb-15;
+      border-bottom: 1px solid $gray-600-rgb-15;
+   }
+
+   &__logo {
+      @include center;
+      height: 45px;
+   }
+   &__app {
+      display: flex;
+      gap: 10px;
+   }
+   &__social {
+      margin-left: auto;
+   }
+
+   &__foot {
+      display: flex;
+      padding: 18px 0;
+   }
+   &__foot-list {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      color: $gray-600;
+   }
+   &__foot-item {
+   }
+   &__foot-link {
+   }
+   &__payment {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: auto;
+      margin-right: 37px;
+   }
+   &__payment-item {
+      @include center;
+      background-color: $white;
+      border: 1px solid $gray-200;
+      width: 34px;
+      height: 23px;
+      border-radius: 3px;
+   }
+   &__payment-img {
+   }
+
+   &__online-chat {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+   }
+}
+
+.subscribe {
+   background-color: $accent;
+   padding: 24px 0 21px;
+
+   &__container {
+      @include flex-between-center;
+   }
+
+   &__title {
+      width: 40%;
+      font-size: 18px;
+      font-weight: 600;
+      color: $white;
+   }
+   &__form {
+      width: 51%;
+      display: flex;
+      gap: 17px;
+   }
+   &__label {
+      width: 100%;
+   }
+   &__input {
+      width: 100%;
+   
+
+
+  
+   }
+}
+
+.title-md {
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.contacts {
+   width: 44%;
+
+   &__top {
+      @include flex-between-center;
+      margin-bottom: 17px;
+   }
+
+   &__btn {
+      color: $accent;
+      border-radius: 5px;
+      transition:
+         background-color $transition,
+         opacity $transition,
+         box-shadow $transition;
+
+      @include hover {
+         background-color: $accent-rgb-20;
+      }
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__phones-list,
+   &__address-list {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__phones-list {
+      margin-bottom: 31px;
+      gap: 38px;
+   }
+
+   &__phones-item {
+   }
+
+   &__phones-title {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 3px;
+   }
+
+   &__phones-link {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 7px;
+   }
+
+   &__hour-work,
+   &__address-phone {
+      font-size: 12px;
+      color: $gray-600;
+   }
+
+   &__address-list {
+      justify-content: space-between;
+   }
+   &__address-item {
+      width: calc(33% - 15px);
+   }
+
+   &__address-link {
+      display: inline-block;
+      margin-bottom: 7px;
+      line-height: 1.28;
+   }
+
+   &__address-phone {
+   }
+}
+
+.app {
+   &__link {
+      border-radius: 5px;
+      transition:
+         opacity $transition,
+         box-shadow $transition;
+
+      @include hover {
+         opacity: 0.7;
+      }
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+
+      &:active {
+         opacity: 0.5;
+      }
+   }
+   &__img {
+   }
+}
+
+.social {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+   &__item {
+      font-weight: 500;
+   }
+
+   &__link {
+      position: relative;
+      display: inline-block;
+      background-color: $white;
+      border-radius: 5px;
+      padding: 5px 15px 7px 45px;
+      transition:
+         opacity $transition,
+         box-shadow $transition;
+
+      &::before {
+         @include pseudo;
+         background-repeat: no-repeat;
+         width: 20px;
+         height: 20px;
+         top: 50%;
+         left: 12px;
+         transform: translateY(-50%);
+      }
+
+      @include hover {
+         opacity: 0.7;
+      }
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+
+      &:active {
+         opacity: 0.5;
+      }
+   }
+   &__quantity {
+      font-size: 10px;
+      color: $gray-600;
+      font-weight: 400;
+   }
+
+   &__link--vk {
+      &::before {
+         background-image: url("../images/social/vk.png");
+      }
+   }
+   &__link--instagram {
+      &::before {
+         background-image: url("../images/social/instagram.png");
+      }
+   }
+   &__link--youtube {
+      &::before {
+         background-image: url("../images/social/youtube.png");
+      }
+   }
+   &__link--telegram {
+      &::before {
+         background-image: url("../images/social/telegram.png");
+      }
+   }
 }

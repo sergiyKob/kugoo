@@ -78,6 +78,11 @@ $maxWidth: 1920;
    flex-direction: column;
 }
 
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+}
+
 @mixin flex-between-center {
    display: flex;
    align-items: center;

@@ -4,10 +4,11 @@
    // width: 255px;
    border-radius: 10px;
    border: 1.5px solid $gray-200;
-   transition: transform 0.2s;
+   transition: border $transition;
 
    @include hover {
-      transform: scale(1.03);
+      border: 1.5px solid $accent;
+
       .product-card__title {
          color: $accent;
       }
