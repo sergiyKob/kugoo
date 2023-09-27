@@ -1,5 +1,11 @@
-html {
+html,
+body {
+   // scrollbar-gutter: stable;
    height: 100%;
+}
+
+html {
+   scroll-behavior: smooth;
 }
 
 body {
@@ -9,8 +15,8 @@ body {
    font-size: $font-size;
    line-height: $line-height;
    font-weight: 400;
-   height: 100%;
    overflow-x: hidden;
+   scrollbar-gutter: stable;
 }
 
 .wrapper {
@@ -66,18 +72,44 @@ body {
    &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: $accent;
+
    }
 
    &::-webkit-scrollbar-track {
       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       background-color: #f9f9fd;
+
    }
 }
 
 .ttu {
    text-transform: uppercase;
 }
+
+.overlay {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition:
+      opacity 0.2s,
+      visibility 0.2s;
+   z-index: 99;
+
+   &.is-active {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+//-------------------------------//
 
 .d-flex {
    display: flex;
@@ -393,25 +425,46 @@ body {
    }
 }
 
-.overlay {
-   position: fixed;
-   left: 0;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   background-color: rgba(0, 0, 0, 0.2);
-   height: 100%;
-   width: 100%;
-   opacity: 0;
-   visibility: hidden;
-   transition:
-      opacity 0.2s,
-      visibility 0.2s;
-   z-index: 99;
+.title-md {
+   font-size: 18px;
+   font-weight: 500;
+}
 
-   &.is-active {
-      opacity: 1;
-      visibility: visible;
+.hover {
+   padding: 0 3px;
+   margin: 0 -3px;
+   border-radius: 3px;
+   transition:
+      color $transition,
+      opacity $transition;
+
+   @include hover {
+      color: $accent;
+   }
+   &:focus {
+      color: $accent;
+      box-shadow: 0 0 0 2px $accent-rgb-30;
+   }
+   &:active {
+      opacity: 0.7;
+   }
+}
+
+.hover-opacity {
+   transition:
+      opacity $transition,
+      box-shadow $transition;
+
+   @include hover {
+      opacity: 0.8;
+   }
+
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
+
+   &:active {
+      opacity: 0.6;
    }
 }
 
@@ -434,6 +487,7 @@ body {
    }
 
    @include hover {
+      box-shadow: 0 0 0 1px $white;
       &::placeholder {
          opacity: 1;
       }
@@ -445,4 +499,10 @@ body {
          opacity: 0;
       }
    }
+}
+
+.logo {
+   padding: 0 5px;
+   margin: 0 -5px;
+   border-radius: 5px;
 }

@@ -40,6 +40,7 @@ function scripts() {
    return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/swiper/swiper-bundle.min.js',
+      'node_modules/choices.js/public/assets/scripts/choices.min.js',
 
       // 'node_modules/slick-carousel/slick/slick.js',
       'node_modules/rateyo/src/jquery.rateyo.js',

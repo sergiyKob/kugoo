@@ -163,26 +163,7 @@
    }
 }
 
-.logo {
-   padding: 0 5px;
-   margin-left: -5px;
-   border-radius: 5px;
-   transition:
-      opacity $transition,
-      box-shadow $transition;
-   @include hover {
-      opacity: 0.8;
-   }
-   &:focus {
-      box-shadow: 0 0 0 3px $accent-rgb-30;
-   }
-   &:active {
-      opacity: 0.7;
-   }
 
-   &__img {
-   }
-}
 
 .header-search {
    position: relative;
@@ -193,18 +174,21 @@
       position: relative;
       display: flex;
    }
-   &__select {
+
+   &__select-wrap {
+      width: 110px;
       position: absolute;
       top: 4px;
       left: 4px;
-      background-color: $background;
-      border-radius: 5px;
-      padding: 5px 14px;
-      cursor: pointer;
    }
+
+   &__select {
+   }
+
    &__label {
       width: 100%;
    }
+
    &__input {
       height: 40px;
       border: 1.5px solid $accent;
@@ -235,6 +219,7 @@
          }
       }
    }
+
    &__btn {
       @include center;
       position: absolute;
@@ -255,9 +240,11 @@
          box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
       }
    }
+
    &__btn-icon {
       fill: $white;
    }
+
    &__btn-clear {
       @include center;
       position: absolute;
@@ -273,6 +260,7 @@
          opacity $transition,
          visibility $transition;
    }
+
    &__btn-clear-icon {
       fill: $black;
    }
@@ -322,20 +310,10 @@
    &__link {
       display: inline-block;
       padding: 6.5px 10px;
-      border-radius: 5px;
-      transition:
-         background-color $transition,
-         box-shadow $transition;
+   }
 
-      @include hover {
-         background-color: $accent-rgb-20;
-      }
-      &:focus {
-         box-shadow: 0px 0px 0px 3px $accent-rgb-30;
-      }
-      &:active {
-         box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
-      }
+   &__link--active {
+      color: $accent;
    }
 
    &__label {

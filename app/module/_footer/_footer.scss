@@ -13,16 +13,12 @@
       justify-content: space-between;
    }
 
-   &__catalog-title {
+   &__catalog-title,
+   &__menu-title {
       margin-bottom: 17px;
    }
    &__catalog {
       width: 35%;
-   }
-
-   &__catalog-list {
-   }
-   &__catalog-item {
    }
 
    &__catalog-item,
@@ -32,42 +28,17 @@
       }
    }
 
-   &__catalog-link {
-   }
-
    &__catalog-link,
    &__menu-link {
       color: $gray-600;
-      padding: 0 3px;
-      margin-left: -3px;
-      border-radius: 3px;
-      transition:
-         color $transition,
-         opacity $transition;
-
-      @include hover {
-         color: $accent;
-      }
-      &:focus {
-         color: $accent;
-         box-shadow: 0 0 0 2px $accent-rgb-30;
-      }
-      &:active {
-         opacity: 0.7;
-      }
    }
 
    &__menu {
       width: 55%;
    }
+
    &__menu-list {
       column-count: 2;
-   }
-   &__menu-item {
-   }
-   &__menu-link {
-   }
-   &__contacts {
    }
 
    &__body {
@@ -153,16 +124,7 @@
    }
    &__input {
       width: 100%;
-   
-
-
-  
    }
-}
-
-.title-md {
-   font-size: 18px;
-   font-weight: 500;
 }
 
 .contacts {
@@ -175,20 +137,8 @@
 
    &__btn {
       color: $accent;
-      border-radius: 5px;
-      transition:
-         background-color $transition,
-         opacity $transition,
-         box-shadow $transition;
-
       @include hover {
-         background-color: $accent-rgb-20;
-      }
-      &:focus {
-         box-shadow: 0 0 0 3px $accent-rgb-30;
-      }
-      &:active {
-         opacity: 0.7;
+         opacity: 0.8;
       }
    }
 
@@ -245,25 +195,10 @@
 .app {
    &__link {
       border-radius: 5px;
-      transition:
-         opacity $transition,
-         box-shadow $transition;
-
-      @include hover {
-         opacity: 0.7;
-      }
-
-      &:focus {
-         box-shadow: 0 0 0 3px $accent-rgb-30;
-      }
-
-      &:active {
-         opacity: 0.5;
-      }
-   }
-   &__img {
    }
 }
+
+
 
 .social {
    &__list {
@@ -281,9 +216,6 @@
       background-color: $white;
       border-radius: 5px;
       padding: 5px 15px 7px 45px;
-      transition:
-         opacity $transition,
-         box-shadow $transition;
 
       &::before {
          @include pseudo;
@@ -294,19 +226,8 @@
          left: 12px;
          transform: translateY(-50%);
       }
-
-      @include hover {
-         opacity: 0.7;
-      }
-
-      &:focus {
-         box-shadow: 0 0 0 3px $accent-rgb-30;
-      }
-
-      &:active {
-         opacity: 0.5;
-      }
    }
+
    &__quantity {
       font-size: 10px;
       color: $gray-600;

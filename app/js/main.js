@@ -1,4 +1,7 @@
 
+
+// swiper //
+
 const swiper = new Swiper('.swiper', {
    // Optional parameters
    loop: true,
@@ -11,13 +14,18 @@ const swiper = new Swiper('.swiper', {
    }
 });
 
-// modal-ci=ontacts
+// swiper  end //
+
+
+
+// modal-contacts //
 
 const modalBtn = document.querySelectorAll('.header-contacts__btn');
 const modalContacts = document.querySelector('.modal-contacts');
 const modalOverlay = document.querySelector('.overlay');
 const modalBtnIcon = document.querySelector('.header-contacts__btn-icon');
 const modalClose = document.querySelector('.modal-contacts__close');
+// const body = document.querySelector('.body');
 
 
 modalBtn.forEach((el) => {
@@ -27,13 +35,10 @@ modalBtn.forEach((el) => {
       modalBtnIcon.classList.add('is-active');
       modalOverlay.classList.add('is-active');
       modalContacts.classList.add('is-open');
+      // body.classList.add('lock');
 
    });
-
 });
-
-
-
 
 
 modalOverlay.addEventListener('click', (e) => {
@@ -41,6 +46,8 @@ modalOverlay.addEventListener('click', (e) => {
    modalOverlay.classList.remove('is-active');
    modalContacts.classList.remove('is-open');
    modalBtnIcon.classList.remove('is-active');
+   // body.classList.remove('lock');
+
 
 });
 
@@ -50,8 +57,48 @@ modalClose.addEventListener('click', (e) => {
    modalOverlay.classList.remove('is-active');
    modalContacts.classList.remove('is-open');
    modalBtnIcon.classList.remove('is-active');
+   // body.classList.remove('lock');
+
 
 });
+
+
+// modal-contacts end //
+
+
+
+// choices.js //
+
+// Pass single element
+const defaultSelect = () => {
+   const element = document.querySelector('.default-select');
+   const choices = new Choices(element, {
+      searchEnabled: false,
+   });
+};
+
+defaultSelect();
+
+
+const multiDefault = () => {
+   const elements = document.querySelectorAll('.multi-default');
+
+   elements.forEach(el => {
+      const choices = new Choices(el, {
+         searchEnabled: false,
+         classNames: {
+            containerInner: 'multi-default__inner',
+         }
+      });
+   });
+};
+
+multiDefault();
+
+
+
+// choices.js end //
+
 
 
 
@@ -180,6 +227,14 @@ $(function () {
    //       }
    //    ]
    // });
+
+
+
+
+
+
+
+
 
 
 

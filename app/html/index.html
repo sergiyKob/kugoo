@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 @include('components/_head/_head.html', {
-"pageTitle": "Main"
+"pageTitle": "интернет магазин електро самокатов"
 })
 
 
-<body>
+<body class="body hidden-scrollbar custom-scrollbar">
    <div class="wrapper">
       @include('components/_header/_header.html')
 
@@ -14,8 +14,17 @@
          <!-- @include('components/_hero/_hero.html') -->
          <!-- @include('components/_box-card/_box-card.html') -->
 
-
-
+      
+         
+         
+         
+         
+<!--          
+         <select class="multi-default">
+            <option selected>Везде</option>
+            <option>Самокаты</option>
+            <option>Аксессуары</option>
+         </select> -->
 
          <!-- <li class="catalog__item">
                      <article class="popular-card">
@@ -286,23 +295,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-        
          <div class="overlay" data-target="overlay"></div>
 
 
       </main>
-
-      @include('components/_footer/_footer.html')
+      <!-- @include('components/_footer/_footer.html') -->
    </div>
 
    @include('components/_scripts/_scripts.html')
