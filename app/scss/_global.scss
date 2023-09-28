@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-   // position: relative;
+   position: relative;
    max-width: $container;
    padding: $container-padding;
    margin: 0 auto;
@@ -423,6 +423,13 @@ body {
          opacity: 0.8;
       }
    }
+}
+
+.title-lg {
+   font-size: 35px;
+   font-weight: 600;
+   text-transform: uppercase;
+
 }
 
 .title-md {

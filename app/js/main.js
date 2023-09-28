@@ -1,6 +1,6 @@
 
 
-// swiper //
+// swiper product-card //
 
 const swiper = new Swiper('.swiper', {
    // Optional parameters
@@ -14,7 +14,72 @@ const swiper = new Swiper('.swiper', {
    }
 });
 
-// swiper  end //
+// swiper product-card end //
+
+
+//  hero-slider //
+
+const heroSlider = new Swiper('.hero-slider', {
+   // езкінечний слайдер
+   loop: true,
+
+   // автопрокрутка 
+   // autoplay: {
+   //    delay: 5000,
+   // },
+
+   // к-ть слайдів
+   slidesPerView: 1,
+
+   // відступи між слайдами
+   spaceBetween: 10,
+
+   // брейкпойнтс 
+   // breakpoints: {
+   //    320: {
+   //       slidesPerView: 1,
+   //    },
+   //    768: {
+   //       slidesPerView: 1,
+   //    },
+   //    992: {
+   //       slidesPerView: 1,
+   //    },
+   //    1200: {
+   //       slidesPerView: 1,
+   //    },
+   // },
+
+   // pagination
+   pagination: {
+      el: '.hero-slider__pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+         return '<span class="' + currentClass + '"></span>' +
+            ' / ' +
+            '<span class="' + totalClass + '"></span>';
+      },
+   },
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.hero-slider__next',
+      prevEl: '.hero-slider__prev',
+   }
+});
+
+// hero-slider end //
+
+
+
+
+
+
+
+
+
+
 
 
 

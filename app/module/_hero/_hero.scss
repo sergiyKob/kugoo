@@ -1,3 +1,136 @@
 .hero {
-padding: 100px 0;
+   color: $white;
+   margin: 30px 30px 40px;
+   border-radius: 10px;
+   background: radial-gradient(544.32% 83.35% at 75.14% 62.23%, #a6a9ff 0%, #6f73ee 100%);
+
+   &__inner {
+      display: flex;
+   }
+
+   &__content {
+      min-height: 288px;
+      position: relative;
+      width: 58%;
+      padding: 40px 0 103px;
+      z-index: 2;
+   }
+
+   &__label {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 5px;
+      border: 1px solid $white;
+      margin-bottom: 35px;
+   }
+
+   &__title {
+      @include adaptiv-font(35, 12);
+      margin-bottom: 7px;
+   }
+   &__descr {
+      @include adaptiv-font(20, 10);
+      margin-bottom: 25px;
+   }
+   &__link {
+   }
+
+   &__img-wrap {
+      position: relative;
+      width: 538px;
+   }
+
+   &__img,
+   &__decor-1,
+   &__decor-2 {
+      position: absolute;
+   }
+
+   &__img,
+   &__decor-1 {
+      right: 0;
+      bottom: 0;
+   }
+
+   &__img {
+      object-fit: contain;
+      object-position: right bottom;
+      z-index: 2;
+   }
+
+   &__decor-1 {
+      z-index: 1;
+   }
+
+   &__decor-2 {
+      left: -175px;
+      bottom: 100px;
+      z-index: 3;
+   }
+}
+
+.hero-slider {
+   &__wrapper {
+   }
+   &__container {
+      position: relative;
+   }
+
+   &__slide {
+      @include img-bg;
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 100% 0;
+   }
+
+   &__pagination {
+      position: absolute;
+      left: 60px;
+      bottom: 31px;
+      font-size: 16px;
+      color: $white;
+      z-index: 2;
+   }
+
+   &__prev,
+   &__next {
+      @include center;
+      background-color: transparent;
+      position: absolute;
+      bottom: 30px;
+      width: 26px;
+      height: 26px;
+      border: 1px solid $white-rgb-20;
+      border-radius: 100%;
+      cursor: pointer;
+      z-index: 2;
+      transition: border $transition;
+
+      @include hover {
+         border: 1px solid $white;
+      }
+
+      &:active {
+         border: 1px solid $white-rgb-50;
+         .hero-slider__prev-icon,
+         .hero-slider__next-icon {
+            opacity: 0.5;
+         }
+      }
+   }
+
+   &__prev {
+      left: 0;
+   }
+
+   &__prev-icon,
+   &__next-icon {
+      fill: $white;
+      transition: opacity $transition;
+   }
+
+   &__next {
+      left: 130px;
+   }
 }
