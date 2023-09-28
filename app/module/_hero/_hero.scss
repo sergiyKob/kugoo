@@ -1,8 +1,10 @@
 .hero {
-   color: $white;
-   margin: 30px 30px 40px;
-   border-radius: 10px;
-   background: radial-gradient(544.32% 83.35% at 75.14% 62.23%, #a6a9ff 0%, #6f73ee 100%);
+   &__top {
+      color: $white;
+      margin: 30px 30px 40px;
+      border-radius: 10px;
+      background: radial-gradient(544.32% 83.35% at 75.14% 62.23%, #a6a9ff 0%, #6f73ee 100%);
+   }
 
    &__inner {
       display: flex;
@@ -66,6 +68,31 @@
       left: -175px;
       bottom: 100px;
       z-index: 3;
+   }
+
+   &__bottom {
+      margin-bottom: 74px;
+   }
+
+   &__bottom-inner {
+      @include flex-between-center;
+   }
+
+   &__benefits {
+      @include flex-between-center;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 70%;
+   }
+
+   &__benefits-item {
+      font-size: 16px;
+   }
+
+   &__benefits-title {
+      font-size: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
    }
 }
 
@@ -132,5 +159,61 @@
 
    &__next {
       left: 130px;
+   }
+}
+
+
+.yandex-reviews {
+   @include flex-center;
+   gap: 20px;
+   width: 190px;
+   height: 76px;
+   border-radius: 5px;
+   border: 1px solid $gray-600-rgb-10;
+   background-color: $white;
+   padding: 10px;
+
+   &__logo {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      border-radius: 5px;
+      background-color: #fc3f1d;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         @include absol-center;
+         background-image: url("../images/icons/icon-yandex.svg");
+         width: 19px;
+         height: 29px;
+      }
+   }
+
+   &__content {
+   }
+
+   &__title {
+      font-size: 12px;
+      color: $gray-600;
+      font-weight: inherit;
+   }
+
+   &__rating {
+      position: relative;
+      font-size: 25px;
+      font-weight: 600;
+      padding-left: 20px;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url("../images/icons/icon-star.svg");
+         width: 14px;
+         height: 14px;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
+      }
    }
 }

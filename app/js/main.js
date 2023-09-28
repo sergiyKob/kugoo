@@ -32,7 +32,7 @@ const heroSlider = new Swiper('.hero-slider', {
    slidesPerView: 1,
 
    // відступи між слайдами
-   spaceBetween: 10,
+   spaceBetween: 20,
 
    // брейкпойнтс 
    // breakpoints: {
@@ -53,6 +53,7 @@ const heroSlider = new Swiper('.hero-slider', {
    // pagination
    pagination: {
       el: '.hero-slider__pagination',
+
       type: 'fraction',
       renderFraction: function (currentClass, totalClass) {
          return '<span class="' + currentClass + '"></span>' +

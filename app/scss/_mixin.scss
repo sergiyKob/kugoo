@@ -59,6 +59,14 @@ $maxWidth: 1920;
    clip: rect(0 0 0 0);
 }
 
+// absolut-center
+
+@mixin absol-center {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
 // center
 
 @mixin center {
