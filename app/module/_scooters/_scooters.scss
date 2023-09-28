@@ -3,15 +3,29 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
+
+      @include mq("tablet-lg") {
+         flex-direction: column;
+      }
    }
 
    &__filter {
       display: flex;
       gap: 10px;
+
+      @include mq("phone") {
+         flex-direction: column;
+      }
+      @include mq("phone-xs") {
+      }
    }
 
    &__filter-item {
    }
+
+   &__filter-btn {
+   }
+
    &__filter-btn--active {
       color: $accent;
       background-color: $white;
@@ -23,12 +37,14 @@
       grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
       gap: 30px;
       margin-bottom: 50px;
+
+      @include mq("tablet-lg") {
+         gap: 15px;
+      }
    }
 
    &__cards-item {
    }
-
-
 
    &__bottom {
       display: flex;
