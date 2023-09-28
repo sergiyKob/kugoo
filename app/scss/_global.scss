@@ -172,6 +172,10 @@ body {
    background-color: $accent;
 }
 
+.section {
+   padding: 50px 0;
+}
+
 .btn {
    display: inline-block;
    font-size: 16px;
@@ -325,6 +329,8 @@ body {
 }
 
 .price {
+   display: flex;
+   flex-direction: column;
    &__old {
       font-size: 12px;
       font-weight: 500;

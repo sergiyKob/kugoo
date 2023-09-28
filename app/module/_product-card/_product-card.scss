@@ -1,7 +1,8 @@
 .product-card {
    height: 100%;
    width: 100%;
-   // width: 255px;
+   display: flex;
+   flex-direction: column;
    border-radius: 10px;
    border: 1.5px solid $gray-200;
    transition: border $transition;
@@ -130,10 +131,13 @@
    }
 
    &__row {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 16px;
    }
 
    &__actions {
+      display: flex;
       gap: 10px;
    }
 
