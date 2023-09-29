@@ -1,0 +1,50 @@
+.benefits {
+   &__top {
+      max-width: 920px;
+      text-align: center;
+      margin: 0 auto 50px;
+   }
+
+   &__title {
+      margin-bottom: 18px;
+   }
+
+   &__descr {
+      font-size: 20px;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+   }
+
+   &__item {
+   }
+}
+
+.tabs {
+   &__list {
+      @include center;
+      gap: 20px;
+      margin-bottom: 58px;
+   }
+
+   &__item {
+   }
+
+   &__btn {
+   }
+
+   &__btn--active {
+      color: $accent;
+      background-color: $white;
+      border: 1.3px solid $accent;
+   }
+
+   &__content {
+   }
+
+   &__content--active {
+   }
+}

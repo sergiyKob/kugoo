@@ -39,7 +39,6 @@
    &__left-descr {
       line-height: 1.2;
       padding: 0 20px 15px;
-
    }
 
    &__left-link {
@@ -47,7 +46,7 @@
    }
 
    &__content {
-      max-width: 44%;
+      max-width: 537px;
    }
 
    &__title {
@@ -81,7 +80,7 @@
       &::before {
          @include pseudo;
          @include img-bg;
-         background-image: url('../images/icons/tringle-left.svg');
+         background-image: url("../images/icons/tringle-left.svg");
          width: 10px;
          height: 10px;
          top: 50%;

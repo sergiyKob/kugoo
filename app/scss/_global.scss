@@ -159,16 +159,7 @@ body {
    justify-content: space-evenly;
 }
 
-//  buttons
 
-.wrap {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 200px;
-   height: 200px;
-   background-color: $accent;
-}
 
 .grid {
    display: grid;
@@ -326,6 +317,7 @@ body {
 
    &__icon {
       fill: $accent;
+      transition: transform $transition;
    }
 
    &--with-icon {

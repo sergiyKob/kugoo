@@ -19,9 +19,9 @@
       transition: background-color $transition;
 
       @include hover {
-         background-color: $accent-rgb-30;
-         .benefits-card__descr {
-            text-decoration: underline;
+         background-color: $accent-rgb-20;
+         .link__icon {
+            transform: translateX(5px);
          }
       }
    }
@@ -49,9 +49,9 @@
       line-height: 1.28;
    }
 
-   &__descr {
-      transition: text-decoration $transition;
-   }
+   // &__descr {
+   //    transition: text-decoration $transition;
+   // }
 
    &__link-card {
       position: absolute;
