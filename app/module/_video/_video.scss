@@ -1,0 +1,67 @@
+.video {
+   height: 630px;
+   margin: 50px 30px;
+
+   &__link {
+      @include img-bg;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: box-shadow $transition;
+      outline: transparent;
+
+      &::before {
+         @include pseudo;
+         @include absol-center;
+         @include img-bg;
+         background-image: url("../images/video/arrow.svg");
+         width: 136px;
+         height: 136px;
+         z-index: 1;
+         transition:
+            width $transition,
+            height $transition;
+      }
+
+      &::after {
+         @include pseudo;
+         background-color: rgba(0, 0, 0, 0.2);
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         opacity: 0;
+         visibility: hidden;
+         border-radius: 10px;
+
+         transition:
+            opacity 0.2s,
+            visibility 0.2s;
+      }
+
+      @include hover {
+         &::before {
+            width: 110px;
+            height: 110px;
+         }
+
+         &::after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent;
+      }
+
+      &:active {
+         &::before {
+            width: 90px;
+            height: 90px;
+         }
+      }
+   }
+}
