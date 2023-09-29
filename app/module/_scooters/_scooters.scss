@@ -50,4 +50,16 @@
       display: flex;
       justify-content: center;
    }
+
+   &__baners {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 100px 0 50px;
+   }
+
+   &__baners-item {
+      width: calc(50% - 15px);
+   }
 }

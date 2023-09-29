@@ -437,8 +437,14 @@ body {
    }
 }
 
+.title-xl {
+   font-size: 35px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
 .title-lg {
-   @include adaptiv-font(35, 18);
+   font-size: 25px;
    font-weight: 600;
    text-transform: uppercase;
 }
@@ -447,6 +453,13 @@ body {
    font-size: 18px;
    font-weight: 500;
 }
+
+.title-sm {
+   font-size: 16px;
+   font-weight: 500;
+}
+
+
 
 .hover {
    padding: 0 3px;

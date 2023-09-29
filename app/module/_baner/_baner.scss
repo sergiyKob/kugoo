@@ -1,0 +1,70 @@
+.baner {
+   position: relative;
+   width: 100%;
+   background-color: $background;
+   border-radius: 10px;
+   overflow: hidden;
+   transition: background-color $transition;
+
+   &::before {
+      @include pseudo;
+      width: 446px;
+      height: 446px;
+      border-radius: 100%;
+      background-color: $accent;
+      top: 50%;
+      right: -280px;
+      transform: translateY(-50%);
+      z-index: 0;
+   }
+
+   @include hover {
+      background-color: $accent-rgb-10;
+      .baner__text-icon {
+         transform: translateX(5px);
+      }
+   }
+
+   &__link {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding: 35px 40px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom right;
+      z-index: 2;
+
+      // &::before {
+      //    @include pseudo;
+      //    width: 100%;
+      //    height: 100%;
+      //    background-color: $white-rgb-70;
+      //    left: 0;
+      //    top: 0;
+      //    right: 0;
+      //    bottom: 0;
+      //    z-index: -1;
+      // }
+   }
+
+   &__content {
+      max-width: 260px;
+   }
+   &__title {
+      margin-bottom: 10px;
+   }
+   &__descr {
+      font-size: 16px;
+      margin-bottom: 22px;
+   }
+   &__text {
+      @include flex-center;
+      font-weight: 500;
+      color: $accent;
+   }
+   &__text-icon {
+      fill: $accent;
+      transition: transform $transition;
+   }
+}

@@ -27,7 +27,6 @@
    }
 
    &__title {
-      @include adaptiv-font(35, 12);
       margin-bottom: 7px;
    }
    &__descr {
@@ -86,12 +85,6 @@
 
    &__benefits-item {
       font-size: 16px;
-   }
-
-   &__benefits-title {
-      font-size: 25px;
-      font-weight: 600;
-      text-transform: uppercase;
    }
 }
 
