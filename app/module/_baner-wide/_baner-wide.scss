@@ -1,0 +1,37 @@
+.baner-wide {
+   position: relative;
+   margin: 50px 30px;
+   border-radius: 10px;
+   background: radial-gradient(708.28% 82.86% at 23.3% 72.57%, #595959 0%, #3b3e46 100%);
+
+   &__inner {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   &__img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+   }
+
+   &__content {
+      position: relative;
+      width: 40%;
+      padding: 67px 0;
+
+   }
+
+   &__label,
+   &__title {
+      margin-bottom: 27px;
+   }
+
+   &__title {
+      color: $white;
+   }
+
+   &__link {
+      color: $black;
+   }
+}

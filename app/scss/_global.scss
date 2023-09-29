@@ -352,6 +352,7 @@ body {
 }
 
 .label {
+   display: inline-block;
    color: $white;
    padding: 4px 8px;
    border-radius: 5px;
@@ -361,7 +362,7 @@ body {
       background-color: $green;
    }
    &--red {
-      background-color: $orange;
+      background-color: $red;
    }
 }
 
