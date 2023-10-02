@@ -1,16 +1,18 @@
 
 
 // swiper product-card //
-
-const swiper = new Swiper('.swiper', {
+const sliderProductCard = new Swiper('.slider-product-card', {
    // Optional parameters
    loop: true,
+
+   // швидкість прокрутки
+   speed: 500,
 
 
    // Navigation arrows
    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.slider-btn-next',
+      prevEl: '.slider-btn-prev',
    }
 });
 
@@ -20,8 +22,11 @@ const swiper = new Swiper('.swiper', {
 //  hero-slider //
 
 const heroSlider = new Swiper('.hero-slider', {
-   // езкінечний слайдер
+   // незкінечний слайдер
    loop: true,
+
+   // швидкість прокрутки
+   speed: 500,
 
    // автопрокрутка 
    // autoplay: {
@@ -62,7 +67,6 @@ const heroSlider = new Swiper('.hero-slider', {
       },
    },
 
-
    // Navigation arrows
    navigation: {
       nextEl: '.hero-slider__next',
@@ -71,6 +75,43 @@ const heroSlider = new Swiper('.hero-slider', {
 });
 
 // hero-slider end //
+
+const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+   // Optional parameters
+   loop: false,
+
+   // к-ть слайдів
+   slidesPerView: 4,
+
+   // к-ть слайдів для пролистування
+   slidesPerGroup: 2,
+
+   // відступи між слайдами
+   spaceBetween: 15,
+
+   // Автовисота
+   // autoHeight: false,
+
+   // мульти рядність
+   grid: {
+      rows: 2,
+   },
+
+   // scrollbar: {
+   //    el: '.swiper-scrollbar',
+   //    draggable: true
+   // },
+
+   // швидкість прокрутки
+   speed: 800,
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.testimonials-swiper__next',
+      prevEl: '.testimonials-swiper__prev',
+   }
+});
 
 
 

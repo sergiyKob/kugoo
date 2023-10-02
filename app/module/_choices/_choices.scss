@@ -37,7 +37,8 @@
    min-height: 32px;
    transition:
       color $transition,
-      background-color $transition;
+      background-color $transition,
+      box-shadow $transition;
 
    @include hover {
       background-color: $gray-100;
@@ -69,6 +70,7 @@
    border: transparent;
    border-radius: 5px;
    top: 130%;
+   // box-shadow: 0 0 24px 0 rgba(50, 50, 50, 0.20);
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
@@ -118,5 +120,12 @@
          background-color: $accent;
          color: $white;
       }
+   }
+}
+
+.choices__inner {
+   transition: box-shadow $transition;
+   &:focus {
+      box-shadow: 0px 0px 0px 3px $accent-rgb-30;
    }
 }

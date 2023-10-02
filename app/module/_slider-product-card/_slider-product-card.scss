@@ -1,6 +1,6 @@
 .slider-product-card {
-   width: 255px;
-   height: 231px;
+   width: 100%;
+   height: 100%;
 
    &__wrap {
    }
@@ -8,8 +8,6 @@
    }
    &__img {
       object-fit: contain;
-      width: 100%;
-      height: 100%;
    }
 }
 
@@ -18,16 +16,19 @@
    @include center;
    width: 40px;
    height: 40px;
-   background-color: $white;
    border-radius: 100%;
    opacity: 0;
    visibility: hidden;
    transition:
-      opacity 0.2s ease-in-out,
-      visibility 0.2s ease-in-out,
-      background-color 0.2s ease-in-out,
-      box-shadow 0.2s ease-in-out;
+      opacity $transition,
+      visibility $transition,
+      background-color $transition,
+      box-shadow $transition;
    z-index: 100;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   cursor: pointer;
 
    &:hover {
       background-color: $background;
@@ -46,8 +47,8 @@
       opacity: 0;
       visibility: hidden;
       transition:
-         opacity 0.2s ease-in-out,
-         visibility 0.2s ease-in-out;
+         opacity $transition,
+         visibility $transition;
    }
 
    @include mq("tablet-lg") {
@@ -58,4 +59,12 @@
          visibility: visible;
       }
    }
+}
+
+
+.slider-btn-prev {
+   left: 10px;
+}
+.slider-btn-next {
+   right: 10px;
 }

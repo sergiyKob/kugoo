@@ -4,8 +4,9 @@
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
-   width: 388px;
-   height: 292px;
+   // width: 378px;
+   // min-height: 284px;
+   height: 245px;
    background-color: $background;
    color: $white;
    padding: 20px;
@@ -15,7 +16,7 @@
    &::after {
       @include pseudo;
       background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(1px);
       top: 0;
       left: 0;
       right: 0;
@@ -37,7 +38,6 @@
       .testimonial-card__inner {
          opacity: 1;
          visibility: visible;
-         transform: translateY(0px);
       }
    }
 
@@ -47,11 +47,9 @@
       z-index: 2;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(200px);
       transition:
          opacity $transition,
-         visibility $transition,
-         transform $transition;
+         visibility $transition;
    }
 
    &__author {
