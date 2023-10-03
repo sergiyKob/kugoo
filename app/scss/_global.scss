@@ -529,29 +529,41 @@ body {
    border-radius: 5px;
 }
 
+// ------ global swiper btn ----//
 
-//--------- testimonials-swiper -----------//
-
-.testimonials-swiper {
-   height: 610px;
-   border-radius: 10px;
-}
-
-.testimonials-swiper .testimonials-swiper__slide {
-   height: calc((100% - 30px) / 2);
-   overflow: hidden;
-}
-
-
-.testimonials-swiper__prev,
-.testimonials-swiper__next {
+.swiper-btn-prev,
+.swiper-btn-next {
+   @include center;
+   width: 68px;
+   height: 68px;
    background-color: $accent;
    border-radius: 100%;
-   color: $white;
+   cursor: pointer;
+   transition:
+      background-color $transition,
+      box-shadow $transition;
 
-   svg {
+   &__icon {
       fill: $white;
+   }
+
+   @include hover {
+      background-color: #8185f9;
+   }
+
+   &:focus {
+      box-shadow: 0 0 0 3px $white-rgb-70;
+   }
+   &:active {
+      box-shadow: 0px 4px 4px 0px $black-rgb-15 inset;
    }
 }
 
-//--------- testimonials-swiper end-----------//
+.swiper-button-disabled {
+   opacity: 0.35;
+   pointer-events: none;
+   transition: opacity $transition;
+}
+
+
+// ------ global swiper btn  end----//

@@ -1,0 +1,23 @@
+.testimonials-swiper {
+   height: 610px;
+   border-radius: 10px;
+
+   & .testimonials-swiper__slide {
+      height: calc((100% - 30px) / 2);
+      overflow: hidden;
+   }
+
+   &__prev,
+   &__next {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+   }
+   &__prev {
+      right: 25%;
+   }
+   &__next {
+      right: 20%;
+   }
+}

@@ -37,16 +37,11 @@
          border-radius: 10px;
 
          transition:
-            opacity 0.2s,
-            visibility 0.2s;
+            opacity $transition,
+            visibility $transition;
       }
 
       @include hover {
-         &::before {
-            width: 110px;
-            height: 110px;
-         }
-
          &::after {
             opacity: 1;
             visibility: visible;
@@ -55,13 +50,6 @@
 
       &:focus {
          box-shadow: 0 0 0 3px $accent-rgb-30;
-      }
-
-      &:active {
-         &::before {
-            width: 90px;
-            height: 90px;
-         }
       }
    }
 }

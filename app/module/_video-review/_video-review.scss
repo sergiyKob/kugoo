@@ -1,0 +1,74 @@
+.video-review {
+   &__top {
+      @include flex-between-center;
+      margin-bottom: 17px;
+   }
+
+   &__descr {
+      max-width: 35%;
+      color: $gray-600;
+      margin-bottom: 35px;
+   }
+}
+
+.video-review-swiper {
+   height: 395px;
+
+   &__wrapper {
+   }
+
+   &__slide {
+      padding: 3px;
+      height: 197px;
+      transition:
+         height 0.8s ease,
+         width 0.8s ease;
+   }
+
+   &__prev {
+      display: none;
+   }
+
+   &__next {
+      position: absolute;
+      top: 20%;
+      right: 15%;
+      transform: translateY(-20%);
+      z-index: 2;
+   }
+}
+
+.video-review-card {
+   width: 100%;
+   height: 100%;
+
+   &__link {
+      border-radius: 10px;
+      background-color: $gray-300;
+      width: 100%;
+      min-height: 197px;
+      margin-bottom: 20px;
+
+      &::before {
+         width: 68px;
+         height: 68px;
+         transition:
+            height 0.8s ease,
+            width 0.8s ease;
+      }
+   }
+
+   &__title {
+   }
+}
+
+.active-slide {
+   height: 304px !important;
+   width: 540px !important;
+}
+.active-slide .video-review-card__link {
+   &::before {
+      width: 104px;
+      height: 104px;
+   }
+}

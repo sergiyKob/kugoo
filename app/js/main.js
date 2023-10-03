@@ -28,13 +28,13 @@ const heroSlider = new Swiper('.hero-slider', {
    // швидкість прокрутки
    speed: 500,
 
+   // к-ть слайдів
+   slidesPerView: 1,
+
    // автопрокрутка 
    // autoplay: {
    //    delay: 5000,
    // },
-
-   // к-ть слайдів
-   slidesPerView: 1,
 
    // відступи між слайдами
    spaceBetween: 20,
@@ -113,6 +113,32 @@ const testimonialsSwiper = new Swiper('.testimonials-swiper', {
    }
 });
 
+// swiper video-review //
+const videoReview = new Swiper('.video-review-swiper', {
+   // Optional parameters
+   loop: true,
+
+   // швидкість прокрутки
+   speed: 800,
+
+   // к-ть слайдів
+   slidesPerView: 3,
+
+   // відступи між слайдами
+   spaceBetween: 30,
+
+   // Зміна назви активного слайду
+   slideActiveClass: 'active-slide',
+
+
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.video-review-swiper__next',
+      prevEl: '.video-review-swiper__prev',
+   }
+});
 
 
 
