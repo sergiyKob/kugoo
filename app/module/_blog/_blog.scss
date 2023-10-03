@@ -1,0 +1,22 @@
+.blog {
+   
+   &__title {
+      margin-bottom: 60px;
+   }
+
+   &__swiper {
+      border-radius: 10px 0 0 10px;
+   }
+
+   &__swiper-prev {
+      display: none;
+   }
+   &__swiper-next {
+      position: absolute;
+      top: 50%;
+      right: 36%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+   }
+}

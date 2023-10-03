@@ -31,8 +31,8 @@
          opacity: 0;
          visibility: hidden;
          transition:
-            opacity 0.2s,
-            visibility 0.2s;
+            opacity $transition,
+            visibility $transition;
       }
 
       @include hover {

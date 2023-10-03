@@ -3,6 +3,10 @@
    background-color: $background;
    border-radius: 10px;
 
+   @include hover {
+      
+   }
+
    &__link {
       @include flex-column;
       height: 100%;
@@ -12,6 +16,7 @@
       @include img-bg;
       height: 185px;
       border-radius: 10px 10px 0px 0px;
+      overflow: hidden;
    }
 
    &__content {
@@ -24,6 +29,11 @@
       line-height: 1.2;
       font-weight: 500;
       margin-bottom: 10px;
+      transition: color $transition;
+
+      @include hover {
+         color: $accent;
+      }
    }
 
    &__text {

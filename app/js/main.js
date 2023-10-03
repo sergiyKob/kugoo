@@ -26,15 +26,15 @@ const heroSlider = new Swiper('.hero-slider', {
    loop: true,
 
    // швидкість прокрутки
-   speed: 500,
+   speed: 600,
 
    // к-ть слайдів
    slidesPerView: 1,
 
    // автопрокрутка 
-   // autoplay: {
-   //    delay: 5000,
-   // },
+   autoplay: {
+      delay: 5000,
+   },
 
    // відступи між слайдами
    spaceBetween: 20,
@@ -137,6 +137,33 @@ const videoReview = new Swiper('.video-review-swiper', {
    navigation: {
       nextEl: '.video-review-swiper__next',
       prevEl: '.video-review-swiper__prev',
+   }
+});
+
+// swiper video-review //
+const blogSwiper = new Swiper('.blog__swiper', {
+   // Optional parameters
+   loop: true,
+
+   // швидкість прокрутки
+   speed: 600,
+
+   // к-ть слайдів
+   slidesPerView: 3.3,
+
+   // відступи між слайдами
+   spaceBetween: 30,
+
+   // Зміна назви активного слайду
+   // slideActiveClass: 'active-slide',
+
+
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.blog__swiper-next',
+      prevEl: '.blog__swiper-prev',
    }
 });
 
