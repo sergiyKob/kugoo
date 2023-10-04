@@ -1,0 +1,95 @@
+.service-hero {
+   color: $white;
+   background: radial-gradient(245.31% 105.59% at 75.04% 76.25%, #ffc960 0%, #f3a712 100%);
+   margin: 30px 30px 100px;
+   border-radius: 10px;
+
+   &__content {
+      position: relative;
+      min-height: 420px;
+      padding: 60px 0;
+      z-index: 2;
+   }
+
+   &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      z-index: 0;
+      @include mq("tablet-lg") {
+         opacity: 0.7;
+      }
+   }
+
+   &__title {
+      max-width: 510px;
+      margin-bottom: 30px;
+   }
+
+   &__subtitle {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: lowercase;
+   }
+
+   &__list {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+
+      margin-bottom: 30px;
+   }
+
+   &__item {
+      position: relative;
+      max-width: 270px;
+      min-height: 40px;
+      font-weight: 500;
+      line-height: 1.28;
+      padding-left: 55px;
+
+      &::before,
+      &::after {
+         @include pseudo;
+      }
+
+      &::before {
+         left: 0;
+         top: 0;
+         width: 40px;
+         height: 40px;
+         background-color: $white-rgb-20;
+         border-radius: 5px;
+      }
+
+      &::after {
+         @include img-bg;
+         left: 12px;
+         top: 12px;
+         width: 16px;
+         height: 16px;
+      }
+
+      &--location::after {
+         background-image: url("../images/icons/location.svg");
+      }
+
+      &--guarantee::after {
+         background-image: url("../images/icons/guarantee.svg");
+      }
+
+      &--gear::after {
+         background-image: url("../images/icons/gear.svg");
+      }
+   }
+
+   &__btn {
+      color: $orange;
+      background-color: $white;
+      padding: 15px 41px;
+   }
+}

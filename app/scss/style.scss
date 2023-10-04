@@ -6,10 +6,12 @@
 @import "global";
 
 @import "../module/_header/_header";
+
 // test //
 @import "../module/_hero1/_hero1";
 //---------//
 
+// главная //
 @import "../module/_hero/_hero";
 @import "../module/_scooters/_scooters";
 @import "../module/_popular-categories/_popular-categories";
@@ -24,6 +26,13 @@
 @import "../module/_blog/_blog";
 @import "../module/_faq/_faq";
 @import "../module/_buy-often/_buy-often";
+
+// сервис //
+@import "../module/service/_service-hero/_service-hero";
+
+
+
+
 
 
 
