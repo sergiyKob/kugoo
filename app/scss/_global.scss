@@ -65,7 +65,7 @@ body {
 
 .custom-scrollbar {
    &::-webkit-scrollbar {
-      width: 5px;
+      width: 10px;
       background-color: #f9f9fd;
    }
 
@@ -590,4 +590,8 @@ body {
          visibility: visible;
       }
    }
+}
+
+.text-center {
+   text-align: center;
 }

@@ -8,6 +8,9 @@ const sliderProductCard = new Swiper('.slider-product-card', {
    // швидкість прокрутки
    speed: 500,
 
+   // Листання слайдів пальцем
+   allowTouchMove: false,
+
 
    // Navigation arrows
    navigation: {
@@ -38,6 +41,15 @@ const heroSlider = new Swiper('.hero-slider', {
 
    // відступи між слайдами
    spaceBetween: 20,
+
+   //Ефект переключення слайду
+   // effect: 'fade',
+
+   // fadeEffect: {
+   //    crossFade: true
+   // },
+
+   //-------------------
 
    // брейкпойнтс 
    // breakpoints: {
@@ -153,11 +165,6 @@ const blogSwiper = new Swiper('.blog__swiper', {
 
    // відступи між слайдами
    spaceBetween: 30,
-
-   // Зміна назви активного слайду
-   // slideActiveClass: 'active-slide',
-
-
 
 
    // Navigation arrows
