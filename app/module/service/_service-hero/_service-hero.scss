@@ -1,7 +1,7 @@
 .service-hero {
    color: $white;
    background: radial-gradient(245.31% 105.59% at 75.04% 76.25%, #ffc960 0%, #f3a712 100%);
-   margin: 30px 30px 100px;
+   margin: 30px 30px 50px;
    border-radius: 10px;
 
    &__content {
@@ -16,7 +16,7 @@
       right: 0;
       bottom: 0;
       object-fit: cover;
-      z-index: 0;
+      z-index: -1;
       @include mq("tablet-lg") {
          opacity: 0.7;
       }

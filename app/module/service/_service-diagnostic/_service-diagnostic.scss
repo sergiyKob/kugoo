@@ -1,0 +1,60 @@
+.service-diagnostic {
+   &__title {
+      max-width: 825px;
+      margin: 0 auto 70px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+   }
+
+   &__list {
+      width: 24%;
+   }
+   &__item {
+      min-height: 127px;
+
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+   &__item-title {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+   }
+
+   &__video {
+      position: relative;
+      width: 417px;
+      height: 417px;
+      border-radius: 100%;
+      background-color: $background;
+      padding: 12px;
+      margin: 0;
+      flex-shrink: 0;
+
+      &::before {
+         @include pseudo;
+         @include absol-center;
+         border: 2px dashed $gray-200;
+         width: 442px;
+         height: 442px;
+         border-radius: 100%;
+      }
+   }
+   &__video-link {
+      display: inline-block;
+      border-radius: 100%;
+      &::before {
+         width: 96px;
+         height: 96px;
+      }
+      &::after {
+         border-radius: 100%;
+      }
+   }
+}

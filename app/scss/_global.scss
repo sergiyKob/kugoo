@@ -34,7 +34,6 @@ body {
 }
 
 .container {
-   position: relative;
    max-width: $container;
    padding: $container-padding;
    margin: 0 auto;
@@ -71,7 +70,7 @@ body {
 
    &::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: $accent;
+      background-color: $gray-300;
    }
 
    &::-webkit-scrollbar-track {
@@ -594,4 +593,7 @@ body {
 
 .text-center {
    text-align: center;
+}
+.text-right {
+   text-align: right;
 }
