@@ -27,24 +27,21 @@
    &__list {
       @include center;
       gap: 20px;
-      margin-bottom: 58px;
-   }
-
-   &__item {
-   }
-
-   &__btn {
+      margin-bottom: 60px;
    }
 
    &__btn--active {
       color: $accent;
       background-color: $white;
       border: 1.3px solid $accent;
+      pointer-events: none;
    }
 
    &__content {
+      display: none;
    }
 
    &__content--active {
+      display: block;
    }
 }

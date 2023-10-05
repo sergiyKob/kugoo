@@ -177,14 +177,6 @@ const blogSwiper = new Swiper('.blog__swiper', {
 
 
 
-
-
-
-
-
-
-
-
 // modal-contacts //
 
 const modalBtn = document.querySelectorAll('.header-contacts__btn');

@@ -1,0 +1,87 @@
+.repair-cost {
+   &__top {
+      max-width: 635px;
+      margin: 0 auto 45px;
+   }
+
+   &__title {
+      margin-bottom: 15px;
+   }
+
+   &__descr {
+      font-size: 16px;
+   }
+
+   &__tabs {
+      display: flex;
+      gap: 30px;
+   }
+
+   &__list {
+      min-height: 100%;
+      width: 29%;
+      background-color: $background;
+      padding: 17px 0;
+      border-radius: 10px;
+   }
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__btn {
+      width: 100%;
+      text-align: left;
+      padding: 10px 30px;
+      border-left: 2px solid transparent;
+      transition:
+         color $transition,
+         opacity $transition;
+
+      @include hover {
+         color: $accent;
+      }
+
+      &:active {
+         opacity: 0.5;
+      }
+   }
+
+   &__btn--active {
+      color: $accent;
+      background-color: $white;
+      border-left: 2px solid $accent;
+      transition:
+         color $transition,
+         background-color $transition,
+         border-left $transition;
+   }
+
+   &__content {
+      flex-grow: 1;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid $gray-200;
+      display: none;
+      height: 100%;
+   }
+
+   &__content--active {
+      display: block;
+   }
+
+   &__content-item {
+      @include flex-between-center;
+      gap: 10px;
+      padding: 20px 30px;
+      &:not(:last-child) {
+         border-bottom: 1px solid $gray-200;
+      }
+   }
+
+   &__content-price {
+      font-weight: 500;
+   }
+}
