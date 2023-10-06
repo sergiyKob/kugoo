@@ -1,0 +1,37 @@
+.service-prices {
+
+   &__top {
+   }
+   &__title {
+      margin-bottom: 15px;
+   }
+   &__descr {
+      margin-bottom: 45px;
+   }
+   &__content {
+      text-align: center;
+   }
+   &__list {
+      margin-bottom: 50px;
+      gap: 0 50px;
+      
+   }
+   &__item {
+      grid-column: span 6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid $gray-200;
+   }
+   &__price {
+      font-weight: 500;
+   }
+   &__num {
+   }
+   &__btn {
+      margin: 0 auto;
+   }
+}

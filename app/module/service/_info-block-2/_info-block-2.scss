@@ -1,0 +1,11 @@
+.info-block-2 {
+   &__left {
+      order: 2;
+      border-radius: 10px;
+   }
+
+   &__img {
+      border-radius: 10px;
+      object-fit: cover;
+   }
+}
