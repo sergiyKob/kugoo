@@ -1,55 +1,66 @@
 .video {
    height: 630px;
-   margin: 50px 30px;
+}
 
-   &__link {
+.video-link {
+   @include img-bg;
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   transition: box-shadow $transition;
+   outline: transparent;
+
+   &::before {
+      @include pseudo;
+      @include absol-center;
       @include img-bg;
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      transition: box-shadow $transition;
-      outline: transparent;
+      background-image: url("../images/video/arrow.svg");
+      width: 96px;
+      height: 96px;
+      z-index: 1;
+      transition: transform $transition;
+   }
 
+   &::after {
+      @include pseudo;
+      background-color: rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 10px;
+
+      transition:
+         opacity $transition,
+         visibility $transition;
+   }
+
+   @include hover {
       &::before {
-         @include pseudo;
-         @include absol-center;
-         @include img-bg;
-         background-image: url("../images/video/arrow.svg");
-         width: 136px;
-         height: 136px;
-         z-index: 1;
-         transition:
-            width $transition,
-            height $transition;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0.9);
       }
 
       &::after {
-         @include pseudo;
-         background-color: rgba(0, 0, 0, 0.2);
-         left: 0;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         opacity: 0;
-         visibility: hidden;
-         border-radius: 10px;
-
-         transition:
-            opacity $transition,
-            visibility $transition;
+         opacity: 1;
+         visibility: visible;
       }
+   }
 
-      @include hover {
-         &::after {
-            opacity: 1;
-            visibility: visible;
-         }
-      }
+   &:focus {
+      box-shadow: 0 0 0 3px $accent-rgb-30;
+   }
 
-      &:focus {
-         box-shadow: 0 0 0 3px $accent-rgb-30;
+   &:active {
+      &::before {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0.8);
       }
    }
 }

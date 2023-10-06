@@ -49,10 +49,6 @@
    &__video-link {
       display: inline-block;
       border-radius: 100%;
-      &::before {
-         width: 96px;
-         height: 96px;
-      }
       &::after {
          border-radius: 100%;
       }

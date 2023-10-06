@@ -53,9 +53,8 @@
       &::before {
          width: 68px;
          height: 68px;
-         transition:
-            height 0.8s ease,
-            width 0.8s ease;
+         transition: width $transition,
+         height $transition;
       }
    }
 

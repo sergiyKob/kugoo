@@ -161,10 +161,15 @@ body {
 .grid {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
+   gap: 30px;
 }
 
-.section {
+.section-padding {
    padding: 50px 0;
+}
+
+.section-margin {
+   margin: 50px 30px;
 }
 
 .btn {
