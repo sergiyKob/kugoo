@@ -53,8 +53,7 @@
       &::before {
          width: 68px;
          height: 68px;
-         transition: width $transition,
-         height $transition;
+         transition: transform $transition;
       }
    }
 
@@ -68,8 +67,8 @@
    width: 540px !important;
 }
 .active-slide .video-review-card__link {
-   &::before {
-      width: 104px;
-      height: 104px;
-   }
+   // &::before {
+   //    width: 104px;
+   //    height: 104px;
+   // }
 }

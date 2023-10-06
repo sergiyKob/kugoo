@@ -86,7 +86,7 @@ const heroSlider = new Swiper('.hero-slider', {
    }
 });
 
-// hero-slider end //
+// testimonials-swiper //
 
 const testimonialsSwiper = new Swiper('.testimonials-swiper', {
    // Optional parameters
@@ -125,7 +125,7 @@ const testimonialsSwiper = new Swiper('.testimonials-swiper', {
    }
 });
 
-// swiper video-review //
+// video-review-swiper //
 const videoReview = new Swiper('.video-review-swiper', {
    // Optional parameters
    loop: true,
@@ -152,7 +152,7 @@ const videoReview = new Swiper('.video-review-swiper', {
    }
 });
 
-// swiper video-review //
+// blog__swiper //
 const blogSwiper = new Swiper('.blog__swiper', {
    // Optional parameters
    loop: true,
@@ -161,7 +161,7 @@ const blogSwiper = new Swiper('.blog__swiper', {
    speed: 600,
 
    // к-ть слайдів
-   slidesPerView: 3.3,
+   slidesPerView: 3,
 
    // відступи між слайдами
    spaceBetween: 30,
@@ -171,6 +171,28 @@ const blogSwiper = new Swiper('.blog__swiper', {
    navigation: {
       nextEl: '.blog__swiper-next',
       prevEl: '.blog__swiper-prev',
+   }
+});
+
+// service-team__swiper //
+const teamSwiper = new Swiper('.service-team__swiper', {
+   // Optional parameters
+   loop: true,
+
+   // швидкість прокрутки
+   speed: 600,
+
+   // к-ть слайдів
+   slidesPerView: 4,
+
+   // відступи між слайдами
+   spaceBetween: 30,
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.service-team__next',
+      prevEl: '.service-team__prev',
    }
 });
 

@@ -5,7 +5,7 @@
    }
 
    &__swiper {
-      border-radius: 10px 0 0 10px;
+      border-radius: 10px;
    }
 
    &__swiper-prev {
@@ -14,7 +14,7 @@
    &__swiper-next {
       position: absolute;
       top: 50%;
-      right: 36%;
+      right: 30%;
       transform: translateY(-50%);
       z-index: 2;
 

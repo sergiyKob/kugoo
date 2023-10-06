@@ -1,0 +1,60 @@
+.service-team {
+   &__title {
+      margin-bottom: 50px;
+   }
+   &__list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 0 30px;
+      margin-bottom: 70px;
+   }
+   &__item {
+      width: calc(50% - 15px);
+      position: relative;
+      min-height: 107px;
+      border-radius: 10px;
+      border: 1px solid $gray-200;
+      padding: 24px 20px 24px 120px;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         width: 52px;
+         height: 52px;
+         top: 24px;
+         left: 36px;
+      }
+   }
+
+   &__item--1 {
+      &::before {
+         background-image: url("../images/icons/scooter.png");
+      }
+   }
+
+   &__item--2 {
+      &::before {
+         background-image: url("../images/icons/user.png");
+      }
+   }
+
+   &__swiper {
+      border-radius: 10px;
+      
+   }
+   &__wrapper {
+   }
+   &__slide {
+   }
+   &__prev {
+      display: none;
+   }
+   &__next {
+      position: absolute;
+      top: 40%;
+      right: 23%;
+      transform: translateY(-40%);
+      z-index: 2;
+   }
+}
