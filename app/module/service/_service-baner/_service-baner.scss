@@ -1,0 +1,44 @@
+.service-baner {
+   position: relative;
+   background-color: $background;
+   border-radius: 10px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: 100% bottom;
+   overflow: hidden;
+
+   &__content {
+      max-width: 545px;
+      padding: 80px 0;
+   }
+   &__title {
+      margin-bottom: 7px;
+   }
+   &__descr {
+      margin-bottom: 35px;
+   }
+   &__subtitle {
+      margin-bottom: 17px;
+   }
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 45px;
+      margin-bottom: 35px;
+   }
+   &__item {
+      position: relative;
+      font-size: 16px;
+      padding-left: 30px;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url("../images/icons/icon-check.svg");
+         width: 20px;
+         height: 20px;
+         top: 0;
+         left: 0;
+      }
+   }
+}
