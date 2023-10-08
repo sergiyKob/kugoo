@@ -296,15 +296,14 @@ body {
 .link {
    display: inline-block;
    position: relative;
-   font-size: 14px;
    font-weight: 500;
    color: $accent;
    padding: 1px 3px;
    border-radius: 3px;
    transition:
-      color 0.2s,
-      box-shadow 0.2s,
-      opacity 0.2s;
+      color $transition,
+      box-shadow $transition,
+      opacity $transition;
 
    &:hover {
       text-decoration: underline;

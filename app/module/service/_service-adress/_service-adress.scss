@@ -1,0 +1,73 @@
+.service-adress {
+   &__title {
+      margin-bottom: 50px;
+   }
+
+   &__inner {
+      background-color: $background;
+      border-radius: 10px;
+      margin: 0 30px;
+      padding: 45px 0;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+   }
+
+   &__item {
+      width: calc(33.333% - 22px);
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      margin-bottom: 22px;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__content-title,
+   &__phone,
+   &__warning {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+   }
+
+   &__content-title {
+      font-weight: 500;
+   }
+
+   &__content-icon {
+      fill: $accent;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+   }
+
+   &__hour-work {
+      color: $gray-600;
+      margin-bottom: 6px;
+      padding-left: 33px;
+   }
+
+   &__link {
+      font-size: 12px;
+      margin-bottom: 16px;
+      padding-left: 33px;
+   }
+
+   &__phone {
+      margin-bottom: 18px;
+   }
+
+   &__warning {
+      max-width: 270px;
+      line-height: 1.22;
+   }
+}
