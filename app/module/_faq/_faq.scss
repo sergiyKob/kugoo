@@ -43,6 +43,7 @@
    }
 
    &__title {
+      max-width: 90%;
       text-align: left;
       padding: 25px 0;
       transition: opacity $transition;

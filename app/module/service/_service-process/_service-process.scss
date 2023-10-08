@@ -41,6 +41,8 @@
    }
 
    &__item {
+      @include img-bg;
+      border-radius: 10px;
    }
 
    &__img {
