@@ -1,0 +1,50 @@
+.service-process {
+
+   &__top {
+      @include flex-between-center;
+      margin-bottom: 43px;
+   }
+
+   &__title {
+      max-width: 465px;
+   }
+
+   &__info {
+      position: relative;
+      max-width: 300px;
+      font-size: 12px;
+      color: $white;
+      background-color: $accent;
+      padding: 14px 14px 17px 92px;
+      border-radius: 5px;
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url('../images/icons/icon-service.svg');
+         width: 46px;
+         height: 46px;
+         left: 25px;
+         top: 23px;
+      }
+   }
+
+   &__info-title {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 600;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr 1fr;
+      gap: 30px;
+   }
+
+   &__item {
+   }
+
+   &__img {
+      border-radius: 10px;
+      object-fit: cover;
+   }
+}
