@@ -3,7 +3,7 @@
    &::after {
       @include pseudo;
       width: 7px;
-      height: 1.5px;
+      height: 1px;
       background-color: $black;
       transition:
          transform $transition,
@@ -92,7 +92,7 @@
    border-width: 0;
    margin-top: 0;
    width: 7px;
-   height: 1.5px;
+   height: 1px;
 }
 
 .choices[data-type*="select-one"].is-open::after {
@@ -127,5 +127,21 @@
    transition: box-shadow $transition;
    &:focus {
       box-shadow: 0px 0px 0px 3px $accent-rgb-30;
+   }
+}
+
+// modal select //
+
+.modal-select {
+   &__inner {
+      padding: 10px 25px;
+      border-radius: 5px;
+      border: 1px solid $gray-200;
+   }
+
+   &__list {
+      top: 110%;
+      font-size: 16px;
+      color: $gray-600;
    }
 }

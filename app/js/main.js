@@ -258,7 +258,7 @@ const defaultSelect = () => {
 
 defaultSelect();
 
-
+// multi select
 const multiDefault = () => {
    const elements = document.querySelectorAll('.multi-default');
 
@@ -273,6 +273,27 @@ const multiDefault = () => {
 };
 
 multiDefault();
+
+
+
+// modal select
+const modalSelect = () => {
+   const elements = document.querySelectorAll('.modal-select');
+
+   elements.forEach(el => {
+      const choices = new Choices(el, {
+         searchEnabled: false,
+         classNames: {
+            containerInner: 'modal-select__inner',
+            list: 'modal-select__list',
+         }
+      });
+   });
+};
+
+modalSelect();
+
+
 
 // choices.js end //
 

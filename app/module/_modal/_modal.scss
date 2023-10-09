@@ -1,0 +1,218 @@
+.modal-wrapper {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 101;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity $transition,
+   visibility $transition;
+
+   &.open {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+.modal {
+   position: relative;
+   width: 790px;
+   background-color: $white;
+   padding: 40px;
+   border-radius: 5px;
+   overflow: hidden;
+   margin: 15px;
+
+   &::before {
+      @include pseudo;
+      width: 794px;
+      height: 794px;
+      border-radius: 100%;
+      background-color: $background;
+      top: 18%;
+      right: -50%;
+      z-index: 0;
+   }
+
+   &__inner {
+      position: relative;
+      max-width: 315px;
+      z-index: 3;
+   }
+   &__title {
+      margin-bottom: 10px;
+   }
+   &__descr {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 35px;
+   }
+   &__form {
+   }
+   &__form-inner {
+      max-width: 265px;
+   }
+   &__form-title {
+      font-weight: 400;
+      line-height: 1.28;
+      margin-bottom: 12px;
+   }
+   &__select {
+   }
+   &__social {
+      margin-bottom: 20px;
+   }
+   &__label {
+      display: block;
+      margin-bottom: 20px;
+   }
+   &__input {
+      width: 100%;
+      box-shadow: 0 0 0 1px $gray-200;
+      border-radius: 5px;
+      padding: 15px 25px;
+      transition: box-shadow $transition;
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+   }
+   &__btn {
+      width: 100%;
+      margin-bottom: 16px;
+   }
+   &__privacy {
+      display: flex;
+      align-items: flex-start;
+      width: 230px;
+      font-size: 12px;
+   }
+   &__privacy-label {
+      display: block;
+      cursor: pointer;
+      margin-right: 12px;
+   }
+   &__privacy-input {
+      @include checkbox-hidden;
+      &:checked + .modal__privacy-checkbox {
+         .modal__privacy-icon {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      &:focus + .modal__privacy-checkbox {
+         box-shadow: 0 0 0 2px $accent-rgb-30;
+      }
+   }
+   &__privacy-checkbox {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: $background;
+      border-radius: 3px;
+      transition:
+         background-color $transition,
+         box-shadow $transition;
+
+      @include hover {
+         background-color: $accent-rgb-20;
+      }
+
+      &:active {
+         background-color: $accent-rgb-10;
+      }
+   }
+   &__privacy-icon {
+      fill: $accent;
+      opacity: 0;
+      visibility: hidden;
+   }
+   &__close {
+      @include center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+      z-index: 3;
+      transition:
+         background-color $transition,
+         opacity $transition;
+
+      @include hover {
+         background-color: $background;
+      }
+      &:active {
+         opacity: 0.7;
+      }
+   }
+   &__close-icon {
+   }
+
+   &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+   }
+}
+
+.social-modal {
+   &__title {
+      font-size: 12px;
+      font-weight: 400;
+      color: $gray-600;
+      margin-bottom: 7px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__label {
+      display: inline-block;
+   }
+   &__input {
+      @include checkbox-hidden;
+      &:checked + .social-modal__checkbox {
+         border: 1px solid $accent;
+      }
+      &:focus + .social-modal__checkbox {
+         box-shadow: 0 0 0 2px $accent-rgb-30;
+      }
+   }
+   &__checkbox {
+      @include center;
+      width: 78px;
+      height: 53px;
+      border-radius: 5px;
+      border: 1px solid $gray-200;
+      cursor: pointer;
+      transition:
+         border $transition,
+         box-shadow $transition;
+
+      @include hover {
+         border: 1px solid $accent;
+      }
+   }
+   &__checkbox-icon {
+      width: 18px;
+      height: 18px;
+   }
+   &__checkbox-icon--viber {
+      fill: $accent;
+   }
+   &__checkbox-icon--whatsapp {
+      fill: $green;
+   }
+   &__checkbox-icon--telegram {
+      fill: $blue;
+   }
+}

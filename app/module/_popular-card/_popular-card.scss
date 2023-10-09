@@ -7,6 +7,18 @@
    font-weight: 500;
    border-radius: 10px;
 
+   @include hover {
+      .popular-card__link {
+         &::after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      .popular-card__content {
+         transform: translateY(-5px);
+      }
+   }
+
    &__link {
       position: relative;
       height: 255px;
@@ -23,7 +35,7 @@
 
       &::after {
          @include pseudo;
-         background-color: rgba(0, 0, 0, 0.1);
+         background-color: rgba(0, 0, 0, 0.15);
          left: 0;
          top: 0;
          right: 0;
@@ -34,13 +46,6 @@
             opacity $transition,
             visibility $transition;
       }
-
-      @include hover {
-         &::after {
-            opacity: 1;
-            visibility: visible;
-         }
-      }
    }
 
    &__content {
@@ -50,6 +55,7 @@
       backdrop-filter: blur(5px);
       padding: 10px 16px;
       z-index: 2;
+      transition: transform $transition;
    }
 
    &__content-inner {

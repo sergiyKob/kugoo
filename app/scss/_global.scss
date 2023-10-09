@@ -572,6 +572,7 @@ body {
 
 .eclipse {
    position: relative;
+
    &::after {
       @include pseudo;
       background-color: rgba(0, 0, 0, 0.15);
