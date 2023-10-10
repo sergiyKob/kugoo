@@ -11,8 +11,9 @@
    background-color: rgba(0, 0, 0, 0.5);
    opacity: 0;
    visibility: hidden;
-   transition: opacity $transition,
-   visibility $transition;
+   transition:
+      opacity $transition,
+      visibility $transition;
 
    &.open {
       opacity: 1;
@@ -133,7 +134,7 @@
       opacity: 0;
       visibility: hidden;
    }
-   
+
    &__close {
       @include center;
       position: absolute;
@@ -182,8 +183,21 @@
    &__input {
       @include checkbox-hidden;
       &:checked + .social-modal__checkbox {
-         border: 1px solid $accent;
+         .social-modal__checkbox-icon {
+            fill: $white;
+         }
       }
+
+      &:checked + .social-modal__checkbox--viber {
+         background-color: $accent;
+      }
+      &:checked + .social-modal__checkbox--whatsapp {
+         background-color: $green;
+      }
+      &:checked + .social-modal__checkbox--telegram {
+         background-color: $blue;
+      }
+
       &:focus + .social-modal__checkbox {
          box-shadow: 0 0 0 2px $accent-rgb-30;
       }
@@ -196,12 +210,12 @@
       border: 1px solid $gray-200;
       cursor: pointer;
       transition:
-         border $transition,
+         background-color $transition,
          box-shadow $transition;
 
-      @include hover {
-         border: 1px solid $accent;
-      }
+         @include hover {
+            background-color: $background;
+         }
    }
    &__checkbox-icon {
       width: 18px;
