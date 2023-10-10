@@ -33,9 +33,6 @@
    }
 
    &__cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      gap: 30px;
       margin-bottom: 50px;
 
       @include mq("tablet-lg") {
