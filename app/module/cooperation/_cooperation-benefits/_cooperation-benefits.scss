@@ -1,0 +1,123 @@
+.cooperation-benefits {
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 10px;
+      margin-bottom: 10px;
+   }
+   &__title {
+      max-width: 640px;
+   }
+   &__subtitle {
+      display: block;
+      font-size: 18px;
+      text-transform: lowercase;
+      font-weight: 400;
+   }
+   &__partner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 295px;
+      border: 1px solid $gray-200;
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-size: 12px;
+      line-height: 1.25;
+   }
+   &__partner-percent {
+      font-size: 50px;
+      font-weight: 600;
+      color: $accent;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+   }
+   &__content {
+      max-width: 625px;
+      padding-top: 35px;
+   }
+   &__content-title {
+      margin-bottom: 16px;
+   }
+   &__list {
+      @include flex-column;
+      gap: 10px;
+      margin-bottom: 50px;
+   }
+   &__item {
+      position: relative;
+      padding-left: 27px;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url("../images/icons/icon-check.svg");
+         width: 17px;
+         height: 17px;
+         left: 0;
+         top: 0;
+      }
+   }
+
+   &__info-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+   }
+   &__info-item {
+      width: 188px;
+      text-align: center;
+      background-color: $background;
+      border-radius: 10px;
+      padding: 15px 17px 20px;
+      font-size: 12px;
+      line-height: 1.25;
+   }
+   &__info-top {
+      color: $accent;
+      margin-bottom: 8px;
+   }
+   &__slider {
+   }
+}
+
+.slider-certificate {
+   width: 452px;
+   border-radius: 5px;
+
+   &__slide {
+   }
+   &__img {
+      object-fit: cover;
+   }
+
+   &__prev,
+   &__next {
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      &:focus {
+         box-shadow: 0 0 0 3px $accent-rgb-30;
+      }
+   }
+
+   &__prev {
+      left: 20px;
+   }
+
+   &__next {
+      right: 20px;
+   }
+
+   &__icon {
+      transition: transform $transition;
+   }
+}

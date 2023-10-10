@@ -196,6 +196,28 @@ const teamSwiper = new Swiper('.service-team__swiper', {
    }
 });
 
+// slider-certificate //
+const certificateSwiper = new Swiper('.slider-certificate', {
+   // Optional parameters
+   loop: false,
+
+   // швидкість прокрутки
+   speed: 600,
+
+   // к-ть слайдів
+   slidesPerView: 1,
+
+   // відступи між слайдами
+   spaceBetween: 20,
+
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.slider-certificate__next',
+      prevEl: '.slider-certificate__prev',
+   }
+});
+
 
 
 
