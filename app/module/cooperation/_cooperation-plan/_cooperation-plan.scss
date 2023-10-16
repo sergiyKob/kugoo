@@ -1,0 +1,29 @@
+.cooperation-plan {
+   color: $white;
+   background: radial-gradient(202.55% 104.39% at 82.43% 76.38%, #8185ff 0%, #6f73ee 100%);
+   border-radius: 10px;
+
+   &__inner {
+      @include flex-between-center;
+      gap: 15px;
+      padding: 50px 0;
+   }
+   &__content {
+      width: 51%;
+   }
+   &__label {
+      margin-bottom: 17px;
+   }
+   &__title {
+      margin-bottom: 20px;
+   }
+   &__form {
+      background-color: transparent;
+   }
+   &__btn {
+      @include hover {
+         background-color: transparent;
+      }
+   }
+}
+

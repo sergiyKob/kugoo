@@ -563,7 +563,6 @@ body {
    }
 }
 
-
 .swiper-button-disabled {
    opacity: 0.35;
    pointer-events: none;
@@ -608,13 +607,32 @@ body {
    opacity: 0.5;
 }
 
+.benefits-block {
+   &__title {
+      margin-bottom: 13px;
+   }
+
+   &__list {
+      @include flex-column;
+      gap: 10px;
+   }
+
+   &__item {
+      display: flex;
+      gap: 10px;
+   }
+
+   &__icon {
+      flex-shrink: 0;
+      fill: $white;
+   }
+}
+
 .cards-grid {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
    gap: 30px;
 }
-
-
 
 // test magnific-popup //
 
