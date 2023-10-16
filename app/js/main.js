@@ -180,7 +180,7 @@ const teamSwiper = new Swiper('.service-team__swiper', {
    loop: true,
 
    // швидкість прокрутки
-   speed: 600,
+   speed: 400,
 
    // к-ть слайдів
    slidesPerView: 4,
@@ -351,6 +351,20 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 });
 
+
+$(function () {
+
+   $('.galery__inner').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+         enabled: true,
+         navigateByImgClick: true,
+         preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      },
+   });
+
+});
 
 
 

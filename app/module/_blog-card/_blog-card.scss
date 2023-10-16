@@ -4,7 +4,13 @@
    border-radius: 10px;
 
    @include hover {
-      
+      .blog-card__title {
+         color: $accent;
+      }
+      .eclipse::after {
+         opacity: 1;
+         visibility: visible;
+      }
    }
 
    &__link {
@@ -30,10 +36,6 @@
       font-weight: 500;
       margin-bottom: 10px;
       transition: color $transition;
-
-      @include hover {
-         color: $accent;
-      }
    }
 
    &__text {
