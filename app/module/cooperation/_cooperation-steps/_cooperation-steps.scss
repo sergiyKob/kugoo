@@ -1,0 +1,68 @@
+.cooperation-steps {
+   text-align: center;
+   
+   &__title {
+      max-width: 854px;
+      margin: 0 auto 20px;
+   }
+   
+   &__descr {
+      font-size: 18px;
+      margin-bottom: 60px;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 105px;
+   }
+
+   &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url('../images/icons/arrow.svg');
+         top: 55px;
+         right: -30px;
+         width: 57px;
+         height: 8px;
+      }
+
+      &:nth-child(4)::before {
+         left: 50%;
+         top: 130%;
+         transform: translateX(-50%) rotate(90deg);
+      }
+      
+      &:nth-child(5)::before {
+         left: 50%;
+         top: -37%;
+         transform: translateX(-50%) rotate(-90deg);
+      }
+   }
+
+   &__item--row2 {
+      &::before {
+         left: -30px;
+         transform: rotate(180deg);
+      }
+   }
+
+   &__item-img {
+      @include center;
+      width: 110px;
+      height: 110px;
+      border-radius: 100%;
+      background-color: $background;
+      margin-bottom: 15px;
+   }
+
+   &__item-title {
+      max-width: 158px;
+   }
+}
