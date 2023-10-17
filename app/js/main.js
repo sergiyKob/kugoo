@@ -364,6 +364,13 @@ $(function () {
       },
    });
 
+      //----- testimonial rating -----//
+      $(".testimonial-card__rating").rateYo({
+         starWidth: "14px",
+         spacing: "5px",
+         normalFill: "rgba(255, 255, 255, 0.50)"
+      });
+
 });
 
 

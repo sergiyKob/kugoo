@@ -628,6 +628,98 @@ body {
    }
 }
 
+.form-block {
+   width: 377px;
+   color: $white;
+   padding: 30px 20px;
+   border-radius: 10px;
+   border: 1.5px solid $white-rgb-20;
+   background-color: $accent;
+
+   &__top {
+      max-width: 245px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__title {
+      font-size: 20px;
+      margin-bottom: 7px;
+   }
+   &__descr {
+      line-height: 1.28;
+      margin-bottom: 28px;
+   }
+
+   &__label {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 20px;
+   }
+
+   &__btn {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+}
+
+.privacy-policy {
+   display: flex;
+   align-items: flex-start;
+   font-size: 12px;
+
+   &__label {
+      display: block;
+      cursor: pointer;
+      margin-right: 12px;
+   }
+
+   &__input {
+      @include checkbox-hidden;
+      &:checked + .privacy-policy__checkbox {
+         .privacy-policy__icon {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+      &:focus + .privacy-policy__checkbox {
+         box-shadow: 0 0 0 2px $white-rgb-40;
+      }
+   }
+
+   &__checkbox {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border-radius: 3px;
+   }
+
+   &__icon {
+      fill: $accent;
+      opacity: 0;
+      visibility: hidden;
+   }
+   &__descr {
+   }
+   &__link {
+      padding: 0 3px;
+      margin: 0 -3px;
+      border-radius: 3px;
+      text-decoration: underline;
+      transition:
+         box-shadow $transition,
+         opacity $transition;
+
+      &:focus {
+         box-shadow: 0 0 0 2px $white-rgb-50;
+      }
+      &:active {
+         opacity: 0.7;
+      }
+   }
+}
+
+
 .cards-grid {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));

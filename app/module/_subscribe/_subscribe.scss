@@ -1,0 +1,22 @@
+.subscribe {
+   background-color: $accent;
+   padding: 24px 0 21px;
+
+   &__container {
+      @include flex-between-center;
+   }
+
+   &__title {
+      width: 40%;
+      font-size: 18px;
+      color: $white;
+   }
+   &__form {
+      width: 51%;
+      display: flex;
+      gap: 17px;
+   }
+   &__label {
+      width: 100%;
+   }
+}
