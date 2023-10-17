@@ -1,0 +1,18 @@
+.social-block {
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+   }
+   &__content {
+      max-width: 683px;
+   }
+   &__title {
+      margin-bottom: 15px;
+   }
+   &__descr {
+      font-size: 18px;
+      margin-bottom: 20px;
+   }
+}
