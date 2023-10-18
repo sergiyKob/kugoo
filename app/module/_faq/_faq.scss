@@ -29,15 +29,16 @@
       cursor: pointer;
 
       @include hover {
-         .accordion__title,
+         .accordion__title {
+            color: $accent;
+         }
          .accordion__icon {
-            opacity: 0.7;
+            fill: $accent;
          }
       }
       &:active {
-           .accordion__title,
-         .accordion__icon {
-            opacity: 0.5;
+         .accordion__title {
+            opacity: 0.7;
          }
       }
    }
@@ -46,13 +47,17 @@
       max-width: 90%;
       text-align: left;
       padding: 25px 0;
-      transition: opacity $transition;
-
+      transition:
+         color $transition,
+         opacity $transition;
    }
 
    &__icon {
       fill: $black;
-      transition: opacity $transition, transform $transition;
+      transition:
+         fill $transition,
+         transform $transition,
+         opacity $transition;
    }
 
    &__content {
