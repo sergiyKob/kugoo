@@ -9,13 +9,8 @@
       gap: 5px;
    }
 
-   &__item,
-   &__item--home {
-   }
-
    &__item {
       position: relative;
-
       &:not(:last-child) {
          &::after {
             content: "/";

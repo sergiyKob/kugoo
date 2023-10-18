@@ -1,0 +1,115 @@
+.test-drive-hero {
+   position: relative;
+   color: $white;
+   border-radius: 10px;
+   margin-top: 0;
+   background-repeat: no-repeat;
+   background-position: center right;
+   background-size: cover;
+
+   &::before {
+      @include pseudo;
+      width: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      background: linear-gradient(73deg, #6f73ee 17.37%, rgba(111, 115, 238, 0) 67.02%);
+   }
+
+   &__content {
+      position: relative;
+      max-width: 688px;
+      padding: 55px 0;
+      z-index: 2;
+   }
+
+   &__top {
+      font-size: 12px;
+      margin-bottom: 20px;
+   }
+
+   &__adress {
+      position: relative;
+      min-height: 18px;
+      font-weight: 500;
+      margin-right: 10px;
+      padding-left: 23px;
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url("../images/icons/location.svg");
+         left: 0;
+         top: 0;
+         width: 15px;
+         height: 15px;
+      }
+   }
+
+   &__hours {
+      opacity: 0.7;
+   }
+
+   &__title {
+      margin-bottom: 30px;
+   }
+
+   &__subtitle {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: lowercase;
+      padding-top: 7px;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 35px;
+      margin-bottom: 40px;
+   }
+
+   &__item {
+      max-width: 205px;
+      position: relative;
+      padding-left: 55px;
+      text-wrap: balance;
+
+      &::before {
+         @include pseudo;
+         background-color: $white-rgb-20;
+         border-radius: 5px;
+         width: 40px;
+         height: 40px;
+         left: 0;
+         top: 0;
+      }
+
+      &::after {
+         @include pseudo;
+         @include img-bg;
+         left: 12px;
+         top: 12px;
+         width: 16px;
+         height: 16px;
+      }
+   }
+
+   &__item--scooter {
+      &::after {
+         background-image: url("../images/icons/icon-scooter.svg");
+      }
+   }
+
+   &__item--energy {
+      &::after {
+         background-image: url("../images/icons/icon-energy.svg");
+      }
+   }
+
+   &__btn {
+      min-width: 160px;
+   }
+}
