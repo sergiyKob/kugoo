@@ -436,22 +436,26 @@ body {
    font-size: 35px;
    font-weight: 600;
    text-transform: uppercase;
+   text-wrap: balance;
 }
 
 .title-lg {
    font-size: 25px;
    font-weight: 600;
    text-transform: uppercase;
+   text-wrap: balance;
 }
 
 .title-md {
    font-size: 18px;
    font-weight: 500;
+   text-wrap: balance;
 }
 
 .title-sm {
    font-size: 16px;
    font-weight: 500;
+   text-wrap: balance;
 }
 
 .hover {
@@ -605,61 +609,6 @@ body {
 
 .opacity-50 {
    opacity: 0.5;
-}
-
-.benefits-block {
-   &__title {
-      margin-bottom: 13px;
-   }
-
-   &__list {
-      @include flex-column;
-      gap: 10px;
-   }
-
-   &__item {
-      display: flex;
-      gap: 10px;
-   }
-
-   &__icon {
-      flex-shrink: 0;
-      fill: $white;
-   }
-}
-
-.form-block {
-   width: 377px;
-   color: $white;
-   padding: 30px 20px;
-   border-radius: 10px;
-   border: 1.5px solid $white-rgb-20;
-   background-color: $accent;
-
-   &__top {
-      max-width: 245px;
-      margin: 0 auto;
-      text-align: center;
-   }
-   &__title {
-      font-size: 20px;
-      margin-bottom: 7px;
-   }
-   &__descr {
-      line-height: 1.28;
-      margin-bottom: 28px;
-   }
-
-   &__label {
-      width: 100%;
-      display: inline-block;
-      margin-bottom: 20px;
-   }
-
-   &__btn {
-      width: 100%;
-      margin-bottom: 20px;
-   }
 }
 
 .privacy-policy {

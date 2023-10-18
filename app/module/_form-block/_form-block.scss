@@ -1,0 +1,32 @@
+.form-block {
+   width: 377px;
+   color: $white;
+   padding: 30px 20px;
+   border-radius: 10px;
+   border: 1.5px solid $white-rgb-20;
+   background-color: $accent;
+
+   &__top {
+      text-align: center;
+      text-wrap: balance;
+   }
+   &__title {
+      font-size: 20px;
+      margin-bottom: 7px;
+   }
+   &__descr {
+      line-height: 1.28;
+      margin-bottom: 28px;
+   }
+
+   &__label {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 20px;
+   }
+
+   &__btn {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+}

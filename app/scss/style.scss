@@ -41,6 +41,8 @@
 @import "../module/service/_service-adress/_service-adress";
 
 // Сотрудничество //
+@import "../module/_benefits-block/_benefits-block";
+@import "../module/_form-block/_form-block";
 @import "../module/cooperation/_cooperation-hero/_cooperation-hero";
 @import "../module/cooperation/_cooperation-popular/_cooperation-popular";
 @import "../module/cooperation/_cooperation-benefits/_cooperation-benefits";
@@ -49,9 +51,10 @@
 @import "../module/cooperation/_cooperation-plan/_cooperation-plan";
 @import "../module/cooperation/_cooperation-info/_cooperation-info";
 @import "../module/cooperation/_cooperation-faq/_cooperation-faq";
+@import "../module/cooperation/_cooperation-offer/_cooperation-offer";
 
 
-// блоки //
+//  маленькі блоки //
 @import "../module/_subscribe/_subscribe";
 @import "../module/_social-block/_social-block";
 @import "../module/_block-links/_block-links";

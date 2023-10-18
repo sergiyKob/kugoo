@@ -1,0 +1,20 @@
+.benefits-block {
+   &__title {
+      margin-bottom: 13px;
+   }
+
+   &__list {
+      @include flex-column;
+      gap: 10px;
+   }
+
+   &__item {
+      display: flex;
+      gap: 10px;
+   }
+
+   &__icon {
+      flex-shrink: 0;
+      fill: $accent;
+   }
+}

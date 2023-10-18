@@ -18,13 +18,18 @@
       margin-bottom: 20px;
    }
 
-   &__list 
-   {
+   &__list {
       font-size: 16px;
    }
+
+   &__icon {
+      fill: $white;
+   }
+
    &__form {
       background-color: transparent;
    }
+
    &__btn {
       @include hover {
          background-color: transparent;
