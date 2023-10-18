@@ -1,0 +1,64 @@
+.breadcrumbs {
+   color: $gray-600;
+   font-size: 12px;
+   padding: 20px 0;
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+   }
+
+   &__item,
+   &__item--home {
+   }
+
+   &__item {
+      position: relative;
+
+      &:not(:last-child) {
+         &::after {
+            content: "/";
+            top: 0;
+            right: 0;
+         }
+      }
+   }
+
+   &__item--home {
+      padding-left: 20px;
+      &::before {
+         @include pseudo;
+         @include img-bg;
+         background-image: url("../images/icons/icon-home.svg");
+         left: 0;
+         top: 0;
+         width: 15px;
+         height: 15px;
+      }
+   }
+
+   &__link {
+      transition:
+         opacity $transition,
+         color $transition;
+
+      @include hover {
+         color: $accent;
+      }
+      &:active {
+         opacity: 0.7;
+      }
+   }
+
+   &__link--current {
+      color: #000;
+
+      @include hover {
+         color: #000;
+      }
+      &:active {
+         opacity: 1;
+      }
+   }
+}

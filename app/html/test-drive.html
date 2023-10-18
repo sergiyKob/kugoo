@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('components/_head/_head.html', {
+"pageTitle": "Тест-драйв"
+})
+
+
+<body class="body hidden-scrollbar custom-scrollbar">
+   <div class="wrapper">
+      @include('components/_header/_header.html')
+
+      <main class="main">
+         @include('components/_breadcrumbs/_breadcrumbs.html')
+         <!-- @include('cooperation/_cooperation-hero/_cooperation-hero.html') -->
+         <!-- @include('cooperation/_cooperation-popular/_cooperation-popular.html') -->
+        
+         <div class="overlay" data-target="overlay"></div>
+      </main>
+      @include('components/_footer/_footer.html')
+   </div>
+
+   @include('components/_scripts/_scripts.html')
+</body>
+
+</html>
